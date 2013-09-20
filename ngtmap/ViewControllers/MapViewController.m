@@ -371,23 +371,12 @@ const float DEFAULT_LON = 82.916667;
                             [UIColor colorWithRed:0.26 green:0.25 blue:0.24 alpha:1.0],
                          nil];
     static int colorId = 0;
-    
-    if ([overlay isKindOfClass:[RoutePolyline class]])
-    {
-		MKPolylineView *polylineView = [[MKPolylineView alloc] initWithPolyline:overlay];
-		polylineView.strokeColor = [okColors objectAtIndex:colorId];
-        colorId = (colorId + 1) % [okColors count];
-		polylineView.lineWidth = 15;
-		return [polylineView autorelease];
-    } else if ([overlay isKindOfClass:[MKPolyline class]])
-    {
-		MKPolylineView *polylineView = [[MKPolylineView alloc] initWithPolyline:overlay];
-		polylineView.strokeColor = [UIColor colorWithRed:1.0 green:0.49 blue:0.25 alpha:1.0];
-		polylineView.lineWidth = 8;
-		return [polylineView autorelease];
-	}
-	
-	return [[[MKOverlayView alloc] initWithOverlay:overlay] autorelease];
+
+    MKPolylineView *polylineView = [[MKPolylineView alloc] initWithPolyline:overlay];
+    polylineView.strokeColor = [okColors objectAtIndex:colorId];
+    colorId = (colorId + 1) % [okColors count];
+    polylineView.lineWidth = [overlay isKindOfClass:[RoutePolyline class]] ? 15 : 8 ;  //Вася, зачем их рисовать разной толщиной?
+	return [polylineView autorelease];
 }
 
 
