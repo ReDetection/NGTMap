@@ -64,11 +64,6 @@
     [self.activityIndicator stopAnimating];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
 - (void)appendResult:(Route *)route
 {
     [self.routes addObject:route];
@@ -117,35 +112,18 @@
     return @"";
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == 0)
-    {
-        return 250;
-    }
-    else
-    {
-        return 85;
-    }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return indexPath.section == 0 ? 250 : 85;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *topCellID = @"TopCell";
     static NSString *routeCellID = @"RouteCell";
 
-    if (indexPath.section == 0)
-    {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:topCellID];
-        if (cell == nil)
-        {
-            cell = self.topCell;
-        }
-//        cell.userInteractionEnabled = NO;
-        return cell;
-    }
-    else
-    {
+    if (indexPath.section == 0) {
+        return self.topCell;
+
+    } else {
         RouteCell *cell = (RouteCell *)[tableView dequeueReusableCellWithIdentifier:routeCellID];
         if (cell == nil)
         {
@@ -164,14 +142,9 @@
     }
 }
 
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Сделаем первую ячейку с формой поиска не выделяемой
-    if (indexPath.section == 0)
-    {
-        return nil;
-    }
-    return indexPath;
+// Сделаем первую ячейку с формой поиска невыделяемой
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    return indexPath.section == 0 ? nil : indexPath;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

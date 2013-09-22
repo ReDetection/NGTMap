@@ -42,11 +42,6 @@ const float DEFAULT_LON = 82.916667;
     return self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
 - (void)addTransport:(Transport *)newTransport
 {
     if (self.route)
@@ -292,11 +287,6 @@ const float DEFAULT_LON = 82.916667;
     self.detailsView.layer.borderColor = [UIColor darkGrayColor].CGColor; 
     self.detailsView.layer.borderWidth = 1;
     
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

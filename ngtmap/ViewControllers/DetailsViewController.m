@@ -56,11 +56,6 @@ typedef enum { SectionHeader, SectionButtons, SectionTimetable } Sections;
     [super dealloc];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
 - (void)carsLoaded
 {
     self.countLabel.text = [NSString stringWithFormat:@"На маршруте: %d шт.", [self.transport.cars count]];
@@ -127,6 +122,7 @@ typedef enum { SectionHeader, SectionButtons, SectionTimetable } Sections;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self refreshControls];
 }
 

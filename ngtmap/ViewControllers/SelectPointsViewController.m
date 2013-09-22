@@ -54,32 +54,16 @@
     lpgr.minimumPressDuration = 0.5;
     [self.mapView addGestureRecognizer:lpgr];
     [lpgr release];
-        
-    if (self.pointNumber == 0) // стартовая точка
-    {
-        MKPointAnnotation *annot = [[MKPointAnnotation alloc] init];
-        annot.coordinate = self.parent.startCoordinates;
-        [self.mapView addAnnotation:annot];
-        [annot release];
-    }
-    else if (self.pointNumber == 1) // конечная точка
-    {
-        MKPointAnnotation *annot = [[MKPointAnnotation alloc] init];
-        annot.coordinate = self.parent.stopCoordinates;
-        [self.mapView addAnnotation:annot];
-        [annot release];
-    }    
-    
+
+    MKPointAnnotation *annot = [[MKPointAnnotation alloc] init];
+    annot.coordinate = self.pointNumber == 0 ? self.parent.startCoordinates : self.parent.stopCoordinates; //TODO: refactor to remove this dependency to the parent
+    [self.mapView addAnnotation:annot];
+    [annot release];
+
     UIImage *resizableYellowButton = [Utility resizableImageNamed:@"button_yellow.png"];
     UIImage *resizableYellowButtonHighlighted = [Utility resizableImageNamed:@"button_yellow_press.png"];
     [self.okButton setBackgroundImage:resizableYellowButton forState:UIControlStateNormal];
     [self.okButton setBackgroundImage:resizableYellowButtonHighlighted forState:UIControlStateHighlighted];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer

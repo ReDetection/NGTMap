@@ -37,12 +37,6 @@
     return self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-}
-
 - (void)dealloc {
     self.transportDataSource = nil;  
     [super dealloc];
@@ -54,11 +48,6 @@
 {      
     [self tryToLoadData];
     [super viewDidLoad];  
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -109,7 +98,6 @@
 }
 
 
-
 #pragma mark - Alert Delegate
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) 
@@ -118,9 +106,6 @@
     }
 }
 
-
-
-
 #pragma mark -
 #pragma mark UITableView data source and delegate methods
 
@@ -128,7 +113,6 @@
 {
     return [self.transportDataSource numberOfSections];
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -178,9 +162,6 @@
 }
 
 
-
-
-
 #pragma mark -
 #pragma mark Content Filtering
 
@@ -188,8 +169,6 @@
 {
     [self.transportDataSource filterList:searchText scope:scope];
 }
-
-
 
 
 #pragma mark -
@@ -201,17 +180,12 @@
     return YES;
 }
 
-
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
 {
     [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:
      [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
     return YES;
 }
-
-
-
-
 
 
 
