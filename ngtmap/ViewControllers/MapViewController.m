@@ -366,9 +366,12 @@ const float DEFAULT_LON = 82.916667;
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
 {
     NSArray *okColors = [NSArray arrayWithObjects:
-                            [UIColor colorWithRed:0.38 green:0.66 blue:0.59 alpha:1.0],
-                            [UIColor colorWithRed:0.98 green:0.49 blue:0.25 alpha:1.0],
-                            [UIColor colorWithRed:0.26 green:0.25 blue:0.24 alpha:1.0],
+                            [UIColor colorWithRed:0.02 green:0.60 blue:0.86 alpha:1.0], // @blue: #049cdb
+                            [UIColor colorWithRed:0.27 green:0.64 blue:0.27 alpha:1.0], // @green: #46a546
+                            [UIColor colorWithRed:0.97 green:0.58 blue:0.02 alpha:1.0], // @orange: #f89406
+                            [UIColor colorWithRed:0.76 green:0.20 blue:0.37 alpha:1.0], // @pink: #c3325f
+                            [UIColor colorWithRed:0.48 green:0.26 blue:0.71 alpha:1.0], // @purple: #7a43b6
+                            [UIColor colorWithRed:0.61 green:0.15 blue:0.11 alpha:1.0], // @red: #9d261d, but I think it's brown :D
                          nil];
     static int colorId = 0;
 
