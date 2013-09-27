@@ -473,7 +473,7 @@ NSString * const mainUrl = @"http://maps.nskgortrans.ru/";
     
     if (connection == self.trassesConnection)
     {
-        [self.receivedCarsData setLength:0];
+        [self.receivedTrassesData setLength:0];
     }
     
     if (connection == self.routesConnection)
