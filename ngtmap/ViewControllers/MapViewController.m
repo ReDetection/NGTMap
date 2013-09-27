@@ -311,9 +311,8 @@ const float DEFAULT_LON = 82.916667;
         
         // Отображаем кастомные иконки и поворачиваем по азимуту
         Car *annotationCar = (Car *)annotation;
-        annotationView.image = annotationCar.icon;
-        annotationView.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(annotationCar.azimuth));
-        [annotationView setCanShowCallout:NO];  
+        annotationView.image = [Utility carWithAngle:DEGREES_TO_RADIANS(annotationCar.azimuth) andColor:[UIColor grayColor]];
+        [annotationView setCanShowCallout:NO];
         
         return annotationView;
     }

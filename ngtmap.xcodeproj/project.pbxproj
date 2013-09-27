@@ -36,7 +36,6 @@
 		730B960B16A294FA007105BB /* mt_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 730B960716A294FA007105BB /* mt_search@2x.png */; };
 		730B961216A2C672007105BB /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 730B961116A2C671007105BB /* Route.m */; };
 		7310584514ECEF6E00F984A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7310584414ECEF6E00F984A8 /* CoreLocation.framework */; };
-		732732CF16B8FC7000EDCF02 /* Bus_arrow-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 732732C716B8FC7000EDCF02 /* Bus_arrow-0@2x.png */; };
 		732732DB16B8FE4D00EDCF02 /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 732732D816B8FE4D00EDCF02 /* delete@2x.png */; };
 		732732DC16B8FE4D00EDCF02 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 732732D916B8FE4D00EDCF02 /* location@2x.png */; };
 		732732DD16B8FE4D00EDCF02 /* refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 732732DA16B8FE4D00EDCF02 /* refresh@2x.png */; };
@@ -82,7 +81,6 @@
 		739008C814E93F36009A6D0D /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739008C714E93F36009A6D0D /* SearchCell.xib */; };
 		739008CB14E94569009A6D0D /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 739008CA14E94569009A6D0D /* SearchCell.m */; };
 		7390090A14E96AF6009A6D0D /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7390090914E96AF6009A6D0D /* JSONKit.m */; };
-		73AE1A2D14F4BBDE0086D406 /* Bus_arrow-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AE1A2514F4BBDE0086D406 /* Bus_arrow-0.png */; };
 		73BFBB9416A72176002226BF /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BFBB9316A72176002226BF /* delete.png */; };
 		73DB180716A3D27A00520789 /* bg_search_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 73DB180516A3D27A00520789 /* bg_search_cell.png */; };
 		73DB180816A3D27A00520789 /* bg_search_cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73DB180616A3D27A00520789 /* bg_search_cell@2x.png */; };
@@ -132,7 +130,6 @@
 		730B961016A2C671007105BB /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Route.h; path = DataClasses/Route.h; sourceTree = "<group>"; };
 		730B961116A2C671007105BB /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Route.m; path = DataClasses/Route.m; sourceTree = "<group>"; };
 		7310584414ECEF6E00F984A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		732732C716B8FC7000EDCF02 /* Bus_arrow-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bus_arrow-0@2x.png"; path = "Images/icons/bus/Bus_arrow-0@2x.png"; sourceTree = "<group>"; };
 		732732D816B8FE4D00EDCF02 /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "delete@2x.png"; path = "Images/icons/delete@2x.png"; sourceTree = "<group>"; };
 		732732D916B8FE4D00EDCF02 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "location@2x.png"; path = "Images/icons/location@2x.png"; sourceTree = "<group>"; };
 		732732DA16B8FE4D00EDCF02 /* refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "refresh@2x.png"; path = "Images/icons/refresh@2x.png"; sourceTree = "<group>"; };
@@ -193,7 +190,6 @@
 		739008CA14E94569009A6D0D /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchCell.m; path = ViewControllers/SearchCell.m; sourceTree = "<group>"; };
 		7390090814E96AF6009A6D0D /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		7390090914E96AF6009A6D0D /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		73AE1A2514F4BBDE0086D406 /* Bus_arrow-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bus_arrow-0.png"; path = "Images/icons/bus/Bus_arrow-0.png"; sourceTree = "<group>"; };
 		73BFBB9316A72176002226BF /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delete.png; path = Images/icons/delete.png; sourceTree = "<group>"; };
 		73DB180516A3D27A00520789 /* bg_search_cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_search_cell.png; path = Images/bg_search_cell.png; sourceTree = "<group>"; };
 		73DB180616A3D27A00520789 /* bg_search_cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg_search_cell@2x.png"; path = "Images/bg_search_cell@2x.png"; sourceTree = "<group>"; };
@@ -483,7 +479,6 @@
 			children = (
 				7338949A16A565FD00AF3DD0 /* buttons */,
 				73DB180316A3D26E00520789 /* bg */,
-				73AE1A2414F4BBCF0086D406 /* bus */,
 				733B0F9614F04B53004E01BD /* Media */,
 				739008D114E95060009A6D0D /* Icons */,
 			);
@@ -527,15 +522,6 @@
 				7390090914E96AF6009A6D0D /* JSONKit.m */,
 			);
 			path = JSONKit;
-			sourceTree = "<group>";
-		};
-		73AE1A2414F4BBCF0086D406 /* bus */ = {
-			isa = PBXGroup;
-			children = (
-				73AE1A2514F4BBDE0086D406 /* Bus_arrow-0.png */,
-				732732C716B8FC7000EDCF02 /* Bus_arrow-0@2x.png */,
-			);
-			name = bus;
 			sourceTree = "<group>";
 		};
 		73DB180316A3D26E00520789 /* bg */ = {
@@ -615,7 +601,6 @@
 				733B0FA814F0E214004E01BD /* InfoViewController.xib in Resources */,
 				733B0FAB14F121A5004E01BD /* info.png in Resources */,
 				733B0FB514F134BE004E01BD /* Bus_arrow.png in Resources */,
-				73AE1A2D14F4BBDE0086D406 /* Bus_arrow-0.png in Resources */,
 				730B95DB16A28259007105BB /* RoutesViewController.xib in Resources */,
 				730B95DF16A287F2007105BB /* routes.png in Resources */,
 				730B95E816A29462007105BB /* bus_details.png in Resources */,
@@ -656,7 +641,6 @@
 				710054A516B2EC1800E33187 /* Default@2x.png in Resources */,
 				710054A616B2EC1800E33187 /* icon57.png in Resources */,
 				710054A716B2EC1800E33187 /* icon114.png in Resources */,
-				732732CF16B8FC7000EDCF02 /* Bus_arrow-0@2x.png in Resources */,
 				732732DB16B8FE4D00EDCF02 /* delete@2x.png in Resources */,
 				732732DC16B8FE4D00EDCF02 /* location@2x.png in Resources */,
 				732732DD16B8FE4D00EDCF02 /* refresh@2x.png in Resources */,
@@ -725,10 +709,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
+				ARCHS = armv6;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -745,6 +726,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = armv6;
 			};
 			name = Debug;
 		};
@@ -752,10 +734,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
+				ARCHS = armv6;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -767,16 +746,14 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = armv6;
 			};
 			name = Release;
 		};
 		736C005D14E81355005D6503 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
+				ARCHS = armv6;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -795,6 +772,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = armv6;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -802,10 +780,7 @@
 		736C005E14E81355005D6503 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
+				ARCHS = armv6;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -823,6 +798,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = armv6;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

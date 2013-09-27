@@ -24,10 +24,8 @@
 @property (nonatomic, retain) NSString *timetableNearPoint;
 @property (nonatomic, retain) NSString *speed;
 @property (nonatomic) CGFloat azimuth;
-@property (nonatomic, retain) UIImage *icon;
 @property (nonatomic, retain) Transport *transport;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
-- (int)normalizeAzimuth:(CGFloat)az;
 
 @end

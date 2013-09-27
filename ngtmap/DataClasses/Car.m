@@ -8,12 +8,17 @@
 #import "Car.h"
 #import "Transport.h"
 
+@interface Car()
+//they are unused? check and delete if they are
+@property (nonatomic, readwrite, copy) NSString *title;
+@property (nonatomic, readwrite, copy) NSString *subtitle;
+@end
+
 @implementation Car
 
 @synthesize transport, timetable, timetableNearPoint, timetableNearTime, speed;
 @synthesize title, subtitle, coordinate;
 @synthesize azimuth;
-@synthesize icon;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
@@ -24,7 +29,6 @@
         self.timetable = [dictionary valueForKey:@"timetable"];
         self.azimuth = - [[dictionary valueForKey:@"azimuth"] floatValue];
         self.speed = [dictionary valueForKey:@"speed"];
-        icon = [UIImage imageNamed:@"Bus_arrow-0.png"];
 
         // Определение ближайшей остановки
         NSUInteger splitterPos = [self.timetable rangeOfString:@"|"].location;
@@ -48,25 +52,10 @@
             self.timetableNearPoint = @"Остановка неизвестна";
         }
         coordinate = CLLocationCoordinate2DMake([[dictionary valueForKey:@"lat"] doubleValue], [[dictionary valueForKey:@"lon"] doubleValue]);
-        title = self.transport.number;
-        subtitle = self.transport.canonicalType;
+        self.title = self.transport.number;
+        self.subtitle = self.transport.canonicalType;
     }
     return self;
-}
-
-- (int)normalizeAzimuth:(CGFloat)az
-{
-    int i = 0;
-    while (i < 9)
-    {
-        int a45 = i * 45;
-        if ((az > (a45 - 22.5)) && (az < (a45 + 22.5)))
-        {
-            return (i * a45 == 360) ? 0 : i * 45;
-        }
-        i++;
-    }
-    return 0;
 }
 
 - (NSString *)description
@@ -75,11 +64,13 @@
 }
 
 - (void)dealloc {
-    self.timetable = nil;
     self.timetableNearPoint = nil;
     self.timetableNearTime = nil;
-    self.speed = nil;
+    self.timetable = nil;
     self.transport = nil;
+    self.subtitle = nil;
+    self.speed = nil;
+    self.title = nil;
     [super dealloc];
 }
 

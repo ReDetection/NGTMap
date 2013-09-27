@@ -11,5 +11,6 @@
 @interface Utility : NSObject
 
 + (UIImage *)resizableImageNamed: (NSString *)filename;
++ (UIImage *)carWithAngle:(double)radians andColor:(UIColor *)fillColor;
 
 @end
