@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6610230D761C4730AAFD6188 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8097D94E5D294F8FA6278FE5 /* libPods.a */; };
+		DB76832917FDE2F100305BFD /* ServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DB76832817FDE2F100305BFD /* ServiceProvider.m */; };
+		DBFADC9517FDCC97005EBE0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9417FDCC97005EBE0E /* UIKit.framework */; };
+		DBFADC9717FDCC97005EBE0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9617FDCC97005EBE0E /* Foundation.framework */; };
+		DBFADC9917FDCC97005EBE0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9817FDCC97005EBE0E /* CoreGraphics.framework */; };
+		DBFADC9F17FDCC97005EBE0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBFADC9D17FDCC97005EBE0E /* InfoPlist.strings */; };
+		DBFADCA117FDCC97005EBE0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCA017FDCC97005EBE0E /* main.m */; };
+		DBFADCA517FDCC97005EBE0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCA417FDCC97005EBE0E /* AppDelegate.m */; };
+		DBFADCA717FDCC97005EBE0E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFADCA617FDCC97005EBE0E /* Default.png */; };
+		DBFADCA917FDCC97005EBE0E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFADCA817FDCC97005EBE0E /* Default@2x.png */; };
+		DBFADCAB17FDCC97005EBE0E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFADCAA17FDCC97005EBE0E /* Default-568h@2x.png */; };
+		DBFADCAE17FDCC97005EBE0E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFADCAC17FDCC97005EBE0E /* MainStoryboard.storyboard */; };
+		DBFADCC917FDCD30005EBE0E /* NSObject-ClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC017FDCD30005EBE0E /* NSObject-ClassName.m */; };
+		DBFADCCA17FDCD30005EBE0E /* UITableViewCellAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC217FDCD30005EBE0E /* UITableViewCellAdditions.m */; };
+		DBFADCCB17FDCD30005EBE0E /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC417FDCD30005EBE0E /* UIView+Animations.m */; };
+		DBFADCCC17FDCD30005EBE0E /* UIView+Creation.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC617FDCD30005EBE0E /* UIView+Creation.m */; };
+		DBFADCCD17FDCD30005EBE0E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC817FDCD30005EBE0E /* UIView+Frame.m */; };
+		DBFADCD217FDCEA0005EBE0E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCD117FDCEA0005EBE0E /* Constants.m */; };
+		DBFADCD917FDD029005EBE0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADCD817FDD029005EBE0E /* QuartzCore.framework */; };
+		DBFADCE017FDD199005EBE0E /* SearchViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCDF17FDD199005EBE0E /* SearchViewContoller.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8097D94E5D294F8FA6278FE5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B182103E5D0A4C1CA9D2FA57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DB76832717FDE2F100305BFD /* ServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceProvider.h; sourceTree = "<group>"; };
+		DB76832817FDE2F100305BFD /* ServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceProvider.m; sourceTree = "<group>"; };
+		DBFADC9117FDCC97005EBE0E /* NGTMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NGTMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBFADC9417FDCC97005EBE0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DBFADC9617FDCC97005EBE0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DBFADC9817FDCC97005EBE0E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DBFADC9C17FDCC97005EBE0E /* NGTMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NGTMap-Info.plist"; sourceTree = "<group>"; };
+		DBFADC9E17FDCC97005EBE0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBFADCA017FDCC97005EBE0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBFADCA217FDCC97005EBE0E /* NGTMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NGTMap-Prefix.pch"; sourceTree = "<group>"; };
+		DBFADCA317FDCC97005EBE0E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DBFADCA417FDCC97005EBE0E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DBFADCA617FDCC97005EBE0E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DBFADCA817FDCC97005EBE0E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DBFADCAA17FDCC97005EBE0E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DBFADCAD17FDCC97005EBE0E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DBFADCBE17FDCD30005EBE0E /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		DBFADCBF17FDCD30005EBE0E /* NSObject-ClassName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-ClassName.h"; sourceTree = "<group>"; };
+		DBFADCC017FDCD30005EBE0E /* NSObject-ClassName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-ClassName.m"; sourceTree = "<group>"; };
+		DBFADCC117FDCD30005EBE0E /* UITableViewCellAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellAdditions.h; sourceTree = "<group>"; };
+		DBFADCC217FDCD30005EBE0E /* UITableViewCellAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellAdditions.m; sourceTree = "<group>"; };
+		DBFADCC317FDCD30005EBE0E /* UIView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animations.h"; sourceTree = "<group>"; };
+		DBFADCC417FDCD30005EBE0E /* UIView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animations.m"; sourceTree = "<group>"; };
+		DBFADCC517FDCD30005EBE0E /* UIView+Creation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Creation.h"; sourceTree = "<group>"; };
+		DBFADCC617FDCD30005EBE0E /* UIView+Creation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Creation.m"; sourceTree = "<group>"; };
+		DBFADCC717FDCD30005EBE0E /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		DBFADCC817FDCD30005EBE0E /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		DBFADCD017FDCEA0005EBE0E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		DBFADCD117FDCEA0005EBE0E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		DBFADCD817FDD029005EBE0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DBFADCDE17FDD199005EBE0E /* SearchViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewContoller.h; sourceTree = "<group>"; };
+		DBFADCDF17FDD199005EBE0E /* SearchViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewContoller.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBFADC8E17FDCC97005EBE0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBFADCD917FDD029005EBE0E /* QuartzCore.framework in Frameworks */,
+				DBFADC9517FDCC97005EBE0E /* UIKit.framework in Frameworks */,
+				DBFADC9717FDCC97005EBE0E /* Foundation.framework in Frameworks */,
+				DBFADC9917FDCC97005EBE0E /* CoreGraphics.framework in Frameworks */,
+				6610230D761C4730AAFD6188 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB76832617FDE2DB00305BFD /* ServiceProvider */ = {
+			isa = PBXGroup;
+			children = (
+				DB76832717FDE2F100305BFD /* ServiceProvider.h */,
+				DB76832817FDE2F100305BFD /* ServiceProvider.m */,
+			);
+			path = ServiceProvider;
+			sourceTree = "<group>";
+		};
+		DBFADC8817FDCC97005EBE0E = {
+			isa = PBXGroup;
+			children = (
+				DBFADC9A17FDCC97005EBE0E /* NGTMap */,
+				DBFADC9317FDCC97005EBE0E /* Frameworks */,
+				DBFADC9217FDCC97005EBE0E /* Products */,
+				B182103E5D0A4C1CA9D2FA57 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		DBFADC9217FDCC97005EBE0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBFADC9117FDCC97005EBE0E /* NGTMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBFADC9317FDCC97005EBE0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBFADCD817FDD029005EBE0E /* QuartzCore.framework */,
+				DBFADC9417FDCC97005EBE0E /* UIKit.framework */,
+				DBFADC9617FDCC97005EBE0E /* Foundation.framework */,
+				DBFADC9817FDCC97005EBE0E /* CoreGraphics.framework */,
+				8097D94E5D294F8FA6278FE5 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBFADC9A17FDCC97005EBE0E /* NGTMap */ = {
+			isa = PBXGroup;
+			children = (
+				DBFADCBD17FDCCF5005EBE0E /* Categories */,
+				DBFADCD317FDCF33005EBE0E /* Models */,
+				DBFADCCF17FDCEA0005EBE0E /* Utils */,
+				DBFADCCE17FDCE54005EBE0E /* DAL */,
+				DBFADCD417FDCF5E005EBE0E /* Controllers */,
+				DBFADCA317FDCC97005EBE0E /* AppDelegate.h */,
+				DBFADCA417FDCC97005EBE0E /* AppDelegate.m */,
+				DBFADCAC17FDCC97005EBE0E /* MainStoryboard.storyboard */,
+				DBFADC9B17FDCC97005EBE0E /* Supporting Files */,
+				DBFADCD617FDCFB7005EBE0E /* Resources */,
+			);
+			path = NGTMap;
+			sourceTree = "<group>";
+		};
+		DBFADC9B17FDCC97005EBE0E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBFADC9C17FDCC97005EBE0E /* NGTMap-Info.plist */,
+				DBFADC9D17FDCC97005EBE0E /* InfoPlist.strings */,
+				DBFADCA017FDCC97005EBE0E /* main.m */,
+				DBFADCA217FDCC97005EBE0E /* NGTMap-Prefix.pch */,
+				DBFADCA617FDCC97005EBE0E /* Default.png */,
+				DBFADCA817FDCC97005EBE0E /* Default@2x.png */,
+				DBFADCAA17FDCC97005EBE0E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBFADCBD17FDCCF5005EBE0E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DBFADCBE17FDCD30005EBE0E /* Categories.h */,
+				DBFADCBF17FDCD30005EBE0E /* NSObject-ClassName.h */,
+				DBFADCC017FDCD30005EBE0E /* NSObject-ClassName.m */,
+				DBFADCC117FDCD30005EBE0E /* UITableViewCellAdditions.h */,
+				DBFADCC217FDCD30005EBE0E /* UITableViewCellAdditions.m */,
+				DBFADCC317FDCD30005EBE0E /* UIView+Animations.h */,
+				DBFADCC417FDCD30005EBE0E /* UIView+Animations.m */,
+				DBFADCC517FDCD30005EBE0E /* UIView+Creation.h */,
+				DBFADCC617FDCD30005EBE0E /* UIView+Creation.m */,
+				DBFADCC717FDCD30005EBE0E /* UIView+Frame.h */,
+				DBFADCC817FDCD30005EBE0E /* UIView+Frame.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		DBFADCCE17FDCE54005EBE0E /* DAL */ = {
+			isa = PBXGroup;
+			children = (
+				DB76832617FDE2DB00305BFD /* ServiceProvider */,
+			);
+			path = DAL;
+			sourceTree = "<group>";
+		};
+		DBFADCCF17FDCEA0005EBE0E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DBFADCD017FDCEA0005EBE0E /* Constants.h */,
+				DBFADCD117FDCEA0005EBE0E /* Constants.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DBFADCD317FDCF33005EBE0E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DBFADCD417FDCF5E005EBE0E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DBFADCDD17FDD180005EBE0E /* SearchViewContoller */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DBFADCD617FDCFB7005EBE0E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DBFADCD717FDCFCC005EBE0E /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DBFADCD717FDCFCC005EBE0E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		DBFADCDD17FDD180005EBE0E /* SearchViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				DBFADCDE17FDD199005EBE0E /* SearchViewContoller.h */,
+				DBFADCDF17FDD199005EBE0E /* SearchViewContoller.m */,
+			);
+			path = SearchViewContoller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBFADC9017FDCC97005EBE0E /* NGTMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBFADCB417FDCC97005EBE0E /* Build configuration list for PBXNativeTarget "NGTMap" */;
+			buildPhases = (
+				26AE5ACD57034D449AF8F38E /* Check Pods Manifest.lock */,
+				DBFADC8D17FDCC97005EBE0E /* Sources */,
+				DBFADC8E17FDCC97005EBE0E /* Frameworks */,
+				DBFADC8F17FDCC97005EBE0E /* Resources */,
+				6E36BC363D6A427393BCC226 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NGTMap;
+			productName = NGTMap;
+			productReference = DBFADC9117FDCC97005EBE0E /* NGTMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBFADC8917FDCC97005EBE0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Alexey Bromot";
+			};
+			buildConfigurationList = DBFADC8C17FDCC97005EBE0E /* Build configuration list for PBXProject "NGTMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DBFADC8817FDCC97005EBE0E;
+			productRefGroup = DBFADC9217FDCC97005EBE0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBFADC9017FDCC97005EBE0E /* NGTMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBFADC8F17FDCC97005EBE0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBFADC9F17FDCC97005EBE0E /* InfoPlist.strings in Resources */,
+				DBFADCA717FDCC97005EBE0E /* Default.png in Resources */,
+				DBFADCA917FDCC97005EBE0E /* Default@2x.png in Resources */,
+				DBFADCAB17FDCC97005EBE0E /* Default-568h@2x.png in Resources */,
+				DBFADCAE17FDCC97005EBE0E /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26AE5ACD57034D449AF8F38E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6E36BC363D6A427393BCC226 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBFADC8D17FDCC97005EBE0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBFADCA117FDCC97005EBE0E /* main.m in Sources */,
+				DBFADCA517FDCC97005EBE0E /* AppDelegate.m in Sources */,
+				DBFADCC917FDCD30005EBE0E /* NSObject-ClassName.m in Sources */,
+				DBFADCCA17FDCD30005EBE0E /* UITableViewCellAdditions.m in Sources */,
+				DBFADCCB17FDCD30005EBE0E /* UIView+Animations.m in Sources */,
+				DBFADCCC17FDCD30005EBE0E /* UIView+Creation.m in Sources */,
+				DBFADCCD17FDCD30005EBE0E /* UIView+Frame.m in Sources */,
+				DBFADCD217FDCEA0005EBE0E /* Constants.m in Sources */,
+				DBFADCE017FDD199005EBE0E /* SearchViewContoller.m in Sources */,
+				DB76832917FDE2F100305BFD /* ServiceProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DBFADC9D17FDCC97005EBE0E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBFADC9E17FDCC97005EBE0E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DBFADCAC17FDCC97005EBE0E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBFADCAD17FDCC97005EBE0E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBFADCB217FDCC97005EBE0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DBFADCB317FDCC97005EBE0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBFADCB517FDCC97005EBE0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B182103E5D0A4C1CA9D2FA57 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NGTMap/NGTMap-Prefix.pch";
+				INFOPLIST_FILE = "NGTMap/NGTMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DBFADCB617FDCC97005EBE0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B182103E5D0A4C1CA9D2FA57 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NGTMap/NGTMap-Prefix.pch";
+				INFOPLIST_FILE = "NGTMap/NGTMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBFADC8C17FDCC97005EBE0E /* Build configuration list for PBXProject "NGTMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBFADCB217FDCC97005EBE0E /* Debug */,
+				DBFADCB317FDCC97005EBE0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBFADCB417FDCC97005EBE0E /* Build configuration list for PBXNativeTarget "NGTMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBFADCB517FDCC97005EBE0E /* Debug */,
+				DBFADCB617FDCC97005EBE0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBFADC8917FDCC97005EBE0E /* Project object */;
+}
