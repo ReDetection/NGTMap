@@ -12,7 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[ServiceProvider sharedProvider] configureMapping];
+    [[ServiceProvider sharedProvider] configureMappings];
     
     return YES;
 }

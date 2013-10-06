@@ -10,12 +10,7 @@
 
 @implementation Constants
 
-//NSString *const kServerAddress = @"http://192.168.1.142:8080";
-//NSString *const kServerAddress = @"http://t.mstatic.ru:8030";
-//NSString *const kServerAddress = @"http://ios.couchcall.biz:8080";
-//NSString *const kServerAddress =@"http://CouchBalancer-739083589.ap-southeast-2.elb.amazonaws.com:8080";
-//NSString *const kServerAddress = @"http://54.252.199.49:8080";//large instance
-
+NSString *const kServerAddress = @"http://192.168.1.142:8080";
 
 
 //NSString *const kRoundsPath = @"/matches/rounds";

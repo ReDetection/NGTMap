@@ -13,7 +13,8 @@ typedef void (^SimpleFailBlock)(NSError *error);
 
 @interface Constants : NSObject
 
-//extern NSString *const kServerAddress;
+extern NSString *const kServerAddress;
+
 //extern NSString *const kRoundsPath;
 //extern NSString *const kGamesPath;
 //extern NSString *const kGamePath;

@@ -8,6 +8,9 @@
 
 #import "ServiceProvider.h"
 
+
+#import <RestKit/RestKit.h>
+
 static ServiceProvider *instance = nil;
 
 @implementation ServiceProvider
@@ -21,8 +24,15 @@ static ServiceProvider *instance = nil;
     return instance;
 }
 
-- (void)configureMapping {
+- (void)configureMappings {
+    NSURL *baseURL = [NSURL URLWithString:kServerAddress];
+    AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    [RKObjectManager setSharedManager:objectManager];
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"text/json"];
     
+    [[RKObjectManager sharedManager] setRequestSerializationMIMEType:RKMIMETypeJSON];
 }
 
 @end

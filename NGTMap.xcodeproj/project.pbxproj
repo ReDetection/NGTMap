@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6610230D761C4730AAFD6188 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8097D94E5D294F8FA6278FE5 /* libPods.a */; };
+		DB1017181801D5B80012D6CF /* DataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017171801D5B80012D6CF /* DataObject.m */; };
+		DB10171F1801D6810012D6CF /* SimplePointTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10171E1801D6810012D6CF /* SimplePointTrack.m */; };
+		DB1017221801D6B10012D6CF /* StopPointTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017211801D6B10012D6CF /* StopPointTrack.m */; };
+		DB1017251801D6D30012D6CF /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017241801D6D30012D6CF /* Route.m */; };
+		DB1017281801D7620012D6CF /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017271801D7620012D6CF /* Track.m */; };
+		DB10172B1801D78C0012D6CF /* TransportUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10172A1801D78C0012D6CF /* TransportUnit.m */; };
 		DB76832917FDE2F100305BFD /* ServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DB76832817FDE2F100305BFD /* ServiceProvider.m */; };
 		DBFADC9517FDCC97005EBE0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9417FDCC97005EBE0E /* UIKit.framework */; };
 		DBFADC9717FDCC97005EBE0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9617FDCC97005EBE0E /* Foundation.framework */; };
@@ -32,6 +38,18 @@
 /* Begin PBXFileReference section */
 		8097D94E5D294F8FA6278FE5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B182103E5D0A4C1CA9D2FA57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DB1017161801D5B80012D6CF /* DataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataObject.h; sourceTree = "<group>"; };
+		DB1017171801D5B80012D6CF /* DataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataObject.m; sourceTree = "<group>"; };
+		DB10171D1801D6810012D6CF /* SimplePointTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePointTrack.h; sourceTree = "<group>"; };
+		DB10171E1801D6810012D6CF /* SimplePointTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePointTrack.m; sourceTree = "<group>"; };
+		DB1017201801D6B10012D6CF /* StopPointTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopPointTrack.h; sourceTree = "<group>"; };
+		DB1017211801D6B10012D6CF /* StopPointTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopPointTrack.m; sourceTree = "<group>"; };
+		DB1017231801D6D30012D6CF /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
+		DB1017241801D6D30012D6CF /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
+		DB1017261801D7620012D6CF /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		DB1017271801D7620012D6CF /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		DB1017291801D78C0012D6CF /* TransportUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportUnit.h; sourceTree = "<group>"; };
+		DB10172A1801D78C0012D6CF /* TransportUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportUnit.m; sourceTree = "<group>"; };
 		DB76832717FDE2F100305BFD /* ServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceProvider.h; sourceTree = "<group>"; };
 		DB76832817FDE2F100305BFD /* ServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceProvider.m; sourceTree = "<group>"; };
 		DBFADC9117FDCC97005EBE0E /* NGTMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NGTMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +100,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB1017151801D5A20012D6CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB1017191801D66B0012D6CF /* PointTrack */,
+				DB10171A1801D66B0012D6CF /* Route */,
+				DB10171B1801D66B0012D6CF /* Track */,
+				DB10171C1801D66B0012D6CF /* TransportUnit */,
+				DB1017161801D5B80012D6CF /* DataObject.h */,
+				DB1017171801D5B80012D6CF /* DataObject.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB1017191801D66B0012D6CF /* PointTrack */ = {
+			isa = PBXGroup;
+			children = (
+				DB10171D1801D6810012D6CF /* SimplePointTrack.h */,
+				DB10171E1801D6810012D6CF /* SimplePointTrack.m */,
+				DB1017201801D6B10012D6CF /* StopPointTrack.h */,
+				DB1017211801D6B10012D6CF /* StopPointTrack.m */,
+			);
+			path = PointTrack;
+			sourceTree = "<group>";
+		};
+		DB10171A1801D66B0012D6CF /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				DB1017231801D6D30012D6CF /* Route.h */,
+				DB1017241801D6D30012D6CF /* Route.m */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		DB10171B1801D66B0012D6CF /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				DB1017261801D7620012D6CF /* Track.h */,
+				DB1017271801D7620012D6CF /* Track.m */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		DB10171C1801D66B0012D6CF /* TransportUnit */ = {
+			isa = PBXGroup;
+			children = (
+				DB1017291801D78C0012D6CF /* TransportUnit.h */,
+				DB10172A1801D78C0012D6CF /* TransportUnit.m */,
+			);
+			path = TransportUnit;
+			sourceTree = "<group>";
+		};
 		DB76832617FDE2DB00305BFD /* ServiceProvider */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,9 +194,9 @@
 			isa = PBXGroup;
 			children = (
 				DBFADCBD17FDCCF5005EBE0E /* Categories */,
-				DBFADCD317FDCF33005EBE0E /* Models */,
 				DBFADCCF17FDCEA0005EBE0E /* Utils */,
 				DBFADCCE17FDCE54005EBE0E /* DAL */,
+				DB1017151801D5A20012D6CF /* Models */,
 				DBFADCD417FDCF5E005EBE0E /* Controllers */,
 				DBFADCA317FDCC97005EBE0E /* AppDelegate.h */,
 				DBFADCA417FDCC97005EBE0E /* AppDelegate.m */,
@@ -185,13 +254,6 @@
 				DBFADCD117FDCEA0005EBE0E /* Constants.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		DBFADCD317FDCF33005EBE0E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		DBFADCD417FDCF5E005EBE0E /* Controllers */ = {
@@ -337,6 +399,12 @@
 				DBFADCD217FDCEA0005EBE0E /* Constants.m in Sources */,
 				DBFADCE017FDD199005EBE0E /* SearchViewContoller.m in Sources */,
 				DB76832917FDE2F100305BFD /* ServiceProvider.m in Sources */,
+				DB1017181801D5B80012D6CF /* DataObject.m in Sources */,
+				DB10171F1801D6810012D6CF /* SimplePointTrack.m in Sources */,
+				DB1017221801D6B10012D6CF /* StopPointTrack.m in Sources */,
+				DB1017251801D6D30012D6CF /* Route.m in Sources */,
+				DB1017281801D7620012D6CF /* Track.m in Sources */,
+				DB10172B1801D78C0012D6CF /* TransportUnit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

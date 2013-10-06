@@ -12,6 +12,6 @@
 
 + (ServiceProvider *)sharedProvider;
 
-- (void)configureMapping;
+- (void)configureMappings;
 
 @end
