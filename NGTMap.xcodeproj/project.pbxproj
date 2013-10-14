@@ -15,6 +15,9 @@
 		DB07838E180BD6BF00582EF3 /* TrackSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB07838D180BD6BF00582EF3 /* TrackSearchViewController.m */; };
 		DB078392180BD73E00582EF3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB078391180BD73E00582EF3 /* MapViewController.m */; };
 		DB078396180BD7D700582EF3 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB078395180BD7D700582EF3 /* SettingsTableViewController.m */; };
+		DB0783A1180BF35800582EF3 /* StartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0783A0180BF35800582EF3 /* StartScreenViewController.m */; };
+		DB0783A9180BFC8D00582EF3 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0783A8180BFC8D00582EF3 /* DataManager.m */; };
+		DB0783AD180C03B400582EF3 /* RoutesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0783AC180C03B400582EF3 /* RoutesTableViewCell.m */; };
 		DB1017181801D5B80012D6CF /* DataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017171801D5B80012D6CF /* DataObject.m */; };
 		DB10171F1801D6810012D6CF /* SimplePointTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10171E1801D6810012D6CF /* SimplePointTrack.m */; };
 		DB1017221801D6B10012D6CF /* StopPointTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017211801D6B10012D6CF /* StopPointTrack.m */; };
@@ -59,6 +62,12 @@
 		DB078391180BD73E00582EF3 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		DB078394180BD7D700582EF3 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		DB078395180BD7D700582EF3 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		DB07839F180BF35800582EF3 /* StartScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenViewController.h; sourceTree = "<group>"; };
+		DB0783A0180BF35800582EF3 /* StartScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreenViewController.m; sourceTree = "<group>"; };
+		DB0783A7180BFC8D00582EF3 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		DB0783A8180BFC8D00582EF3 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		DB0783AB180C03B400582EF3 /* RoutesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesTableViewCell.h; sourceTree = "<group>"; };
+		DB0783AC180C03B400582EF3 /* RoutesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesTableViewCell.m; sourceTree = "<group>"; };
 		DB1017161801D5B80012D6CF /* DataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataObject.h; sourceTree = "<group>"; };
 		DB1017171801D5B80012D6CF /* DataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataObject.m; sourceTree = "<group>"; };
 		DB10171D1801D6810012D6CF /* SimplePointTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePointTrack.h; sourceTree = "<group>"; };
@@ -133,6 +142,7 @@
 		DB078337180BCA6C00582EF3 /* RoutesTableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DB0783AA180C03A000582EF3 /* RoutesTableViewCell */,
 				DB07833B180BCA8700582EF3 /* RoutesTableViewController.h */,
 				DB07833C180BCA8700582EF3 /* RoutesTableViewController.m */,
 			);
@@ -182,6 +192,33 @@
 				DB078395180BD7D700582EF3 /* SettingsTableViewController.m */,
 			);
 			path = SettingsTableViewController;
+			sourceTree = "<group>";
+		};
+		DB07839E180BF34800582EF3 /* StartScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB07839F180BF35800582EF3 /* StartScreenViewController.h */,
+				DB0783A0180BF35800582EF3 /* StartScreenViewController.m */,
+			);
+			path = StartScreenViewController;
+			sourceTree = "<group>";
+		};
+		DB0783A6180BFC7E00582EF3 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				DB0783A7180BFC8D00582EF3 /* DataManager.h */,
+				DB0783A8180BFC8D00582EF3 /* DataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		DB0783AA180C03A000582EF3 /* RoutesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DB0783AB180C03B400582EF3 /* RoutesTableViewCell.h */,
+				DB0783AC180C03B400582EF3 /* RoutesTableViewCell.m */,
+			);
+			path = RoutesTableViewCell;
 			sourceTree = "<group>";
 		};
 		DB1017151801D5A20012D6CF /* Models */ = {
@@ -247,6 +284,7 @@
 		DBC1DD6B180BC32E00E00B27 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DB07839E180BF34800582EF3 /* StartScreenViewController */,
 				DB078393180BD7C700582EF3 /* SettingsTableViewController */,
 				DB07838F180BD73100582EF3 /* MapViewController */,
 				DB07838B180BD63C00582EF3 /* TrackSearchViewController */,
@@ -358,6 +396,7 @@
 		DBFADCCE17FDCE54005EBE0E /* DAL */ = {
 			isa = PBXGroup;
 			children = (
+				DB0783A6180BFC7E00582EF3 /* DataManager */,
 				DB76832617FDE2DB00305BFD /* ServiceProvider */,
 			);
 			path = DAL;
@@ -489,7 +528,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBFADCA117FDCC97005EBE0E /* main.m in Sources */,
+				DB0783A9180BFC8D00582EF3 /* DataManager.m in Sources */,
 				DBFADCA517FDCC97005EBE0E /* AppDelegate.m in Sources */,
+				DB0783AD180C03B400582EF3 /* RoutesTableViewCell.m in Sources */,
 				DBFADCC917FDCD30005EBE0E /* NSObject-ClassName.m in Sources */,
 				DBFADCCA17FDCD30005EBE0E /* UITableViewCellAdditions.m in Sources */,
 				DBFADCCB17FDCD30005EBE0E /* UIView+Animations.m in Sources */,
@@ -507,6 +548,7 @@
 				DB1017251801D6D30012D6CF /* Route.m in Sources */,
 				DB1017281801D7620012D6CF /* Track.m in Sources */,
 				DB07833D180BCA8700582EF3 /* RoutesTableViewController.m in Sources */,
+				DB0783A1180BF35800582EF3 /* StartScreenViewController.m in Sources */,
 				DB10172B1801D78C0012D6CF /* TransportUnit.m in Sources */,
 				DB07833A180BCA7B00582EF3 /* MenuTableViewController.m in Sources */,
 				DB07838E180BD6BF00582EF3 /* TrackSearchViewController.m in Sources */,

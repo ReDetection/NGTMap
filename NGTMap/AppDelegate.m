@@ -13,13 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[ServiceProvider sharedProvider] configureMappings];
-    
-    [[ServiceProvider sharedProvider] getAllRoutesSuccessHandler:^(NSArray *routes) {
         
-    } failHandler:^(NSError *error) {
-        
-    }];
-    
     return YES;
 }
 							
