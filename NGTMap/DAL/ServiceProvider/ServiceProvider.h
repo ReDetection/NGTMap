@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^AllRoutesSuccessBlock)(NSArray *routes);
+
 @interface ServiceProvider : NSObject
 
 + (ServiceProvider *)sharedProvider;
-
 - (void)configureMappings;
+
+- (void)getAllRoutesSuccessHandler: (AllRoutesSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
 
 @end

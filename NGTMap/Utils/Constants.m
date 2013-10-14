@@ -10,8 +10,12 @@
 
 @implementation Constants
 
-NSString *const kServerAddress = @"http://192.168.1.142:8080";
+NSString *const kServerAddress = @"http://api.nskgortrans.ru";
+NSString *const kServerApiVersion = @"0.2";
+NSString *const kServerApiKey = @"1281ecb12bc158e445c20996f67ad8a";
+NSString *const kServerApiFormat = @"json";
 
+NSString *const kRoutesPath = @"/route/list/all";
 
 //NSString *const kRoundsPath = @"/matches/rounds";
 //NSString *const kGamesPath = @"/matches";

@@ -14,6 +14,12 @@
 {
     [[ServiceProvider sharedProvider] configureMappings];
     
+    [[ServiceProvider sharedProvider] getAllRoutesSuccessHandler:^(NSArray *routes) {
+        
+    } failHandler:^(NSError *error) {
+        
+    }];
+    
     return YES;
 }
 							
