@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6610230D761C4730AAFD6188 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8097D94E5D294F8FA6278FE5 /* libPods.a */; };
+		DB07833A180BCA7B00582EF3 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB078339180BCA7B00582EF3 /* MenuTableViewController.m */; };
+		DB07833D180BCA8700582EF3 /* RoutesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB07833C180BCA8700582EF3 /* RoutesTableViewController.m */; };
+		DB078385180BCE8200582EF3 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB078384180BCE8200582EF3 /* AboutViewController.m */; };
+		DB07838A180BD5B100582EF3 /* FavouritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB078389180BD5B100582EF3 /* FavouritesTableViewController.m */; };
+		DB07838E180BD6BF00582EF3 /* TrackSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB07838D180BD6BF00582EF3 /* TrackSearchViewController.m */; };
+		DB078392180BD73E00582EF3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB078391180BD73E00582EF3 /* MapViewController.m */; };
+		DB078396180BD7D700582EF3 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB078395180BD7D700582EF3 /* SettingsTableViewController.m */; };
 		DB1017181801D5B80012D6CF /* DataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017171801D5B80012D6CF /* DataObject.m */; };
 		DB10171F1801D6810012D6CF /* SimplePointTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10171E1801D6810012D6CF /* SimplePointTrack.m */; };
 		DB1017221801D6B10012D6CF /* StopPointTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017211801D6B10012D6CF /* StopPointTrack.m */; };
@@ -15,6 +22,7 @@
 		DB1017281801D7620012D6CF /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017271801D7620012D6CF /* Track.m */; };
 		DB10172B1801D78C0012D6CF /* TransportUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10172A1801D78C0012D6CF /* TransportUnit.m */; };
 		DB76832917FDE2F100305BFD /* ServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DB76832817FDE2F100305BFD /* ServiceProvider.m */; };
+		DBC1DD74180BC39B00E00B27 /* NGTSidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC1DD73180BC39B00E00B27 /* NGTSidePanelController.m */; };
 		DBFADC9517FDCC97005EBE0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9417FDCC97005EBE0E /* UIKit.framework */; };
 		DBFADC9717FDCC97005EBE0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9617FDCC97005EBE0E /* Foundation.framework */; };
 		DBFADC9917FDCC97005EBE0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9817FDCC97005EBE0E /* CoreGraphics.framework */; };
@@ -32,12 +40,25 @@
 		DBFADCCD17FDCD30005EBE0E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC817FDCD30005EBE0E /* UIView+Frame.m */; };
 		DBFADCD217FDCEA0005EBE0E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCD117FDCEA0005EBE0E /* Constants.m */; };
 		DBFADCD917FDD029005EBE0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADCD817FDD029005EBE0E /* QuartzCore.framework */; };
-		DBFADCE017FDD199005EBE0E /* SearchViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCDF17FDD199005EBE0E /* SearchViewContoller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8097D94E5D294F8FA6278FE5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B182103E5D0A4C1CA9D2FA57 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DB078338180BCA7B00582EF3 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		DB078339180BCA7B00582EF3 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		DB07833B180BCA8700582EF3 /* RoutesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesTableViewController.h; sourceTree = "<group>"; };
+		DB07833C180BCA8700582EF3 /* RoutesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesTableViewController.m; sourceTree = "<group>"; };
+		DB078383180BCE8200582EF3 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		DB078384180BCE8200582EF3 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		DB078388180BD5B100582EF3 /* FavouritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritesTableViewController.h; sourceTree = "<group>"; };
+		DB078389180BD5B100582EF3 /* FavouritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesTableViewController.m; sourceTree = "<group>"; };
+		DB07838C180BD6BF00582EF3 /* TrackSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackSearchViewController.h; sourceTree = "<group>"; };
+		DB07838D180BD6BF00582EF3 /* TrackSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackSearchViewController.m; sourceTree = "<group>"; };
+		DB078390180BD73E00582EF3 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		DB078391180BD73E00582EF3 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		DB078394180BD7D700582EF3 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		DB078395180BD7D700582EF3 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		DB1017161801D5B80012D6CF /* DataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataObject.h; sourceTree = "<group>"; };
 		DB1017171801D5B80012D6CF /* DataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataObject.m; sourceTree = "<group>"; };
 		DB10171D1801D6810012D6CF /* SimplePointTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePointTrack.h; sourceTree = "<group>"; };
@@ -52,6 +73,8 @@
 		DB10172A1801D78C0012D6CF /* TransportUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportUnit.m; sourceTree = "<group>"; };
 		DB76832717FDE2F100305BFD /* ServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceProvider.h; sourceTree = "<group>"; };
 		DB76832817FDE2F100305BFD /* ServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceProvider.m; sourceTree = "<group>"; };
+		DBC1DD72180BC39B00E00B27 /* NGTSidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGTSidePanelController.h; sourceTree = "<group>"; };
+		DBC1DD73180BC39B00E00B27 /* NGTSidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGTSidePanelController.m; sourceTree = "<group>"; };
 		DBFADC9117FDCC97005EBE0E /* NGTMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NGTMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFADC9417FDCC97005EBE0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DBFADC9617FDCC97005EBE0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,8 +103,6 @@
 		DBFADCD017FDCEA0005EBE0E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		DBFADCD117FDCEA0005EBE0E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		DBFADCD817FDD029005EBE0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		DBFADCDE17FDD199005EBE0E /* SearchViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewContoller.h; sourceTree = "<group>"; };
-		DBFADCDF17FDD199005EBE0E /* SearchViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewContoller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +121,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB078336180BCA6C00582EF3 /* MenuTableViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				DB078338180BCA7B00582EF3 /* MenuTableViewController.h */,
+				DB078339180BCA7B00582EF3 /* MenuTableViewController.m */,
+			);
+			path = MenuTableViewContoller;
+			sourceTree = "<group>";
+		};
+		DB078337180BCA6C00582EF3 /* RoutesTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB07833B180BCA8700582EF3 /* RoutesTableViewController.h */,
+				DB07833C180BCA8700582EF3 /* RoutesTableViewController.m */,
+			);
+			path = RoutesTableViewController;
+			sourceTree = "<group>";
+		};
+		DB078382180BCE7000582EF3 /* AboutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB078383180BCE8200582EF3 /* AboutViewController.h */,
+				DB078384180BCE8200582EF3 /* AboutViewController.m */,
+			);
+			path = AboutViewController;
+			sourceTree = "<group>";
+		};
+		DB078387180BD59D00582EF3 /* FavouritesTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB078388180BD5B100582EF3 /* FavouritesTableViewController.h */,
+				DB078389180BD5B100582EF3 /* FavouritesTableViewController.m */,
+			);
+			path = FavouritesTableViewController;
+			sourceTree = "<group>";
+		};
+		DB07838B180BD63C00582EF3 /* TrackSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB07838C180BD6BF00582EF3 /* TrackSearchViewController.h */,
+				DB07838D180BD6BF00582EF3 /* TrackSearchViewController.m */,
+			);
+			path = TrackSearchViewController;
+			sourceTree = "<group>";
+		};
+		DB07838F180BD73100582EF3 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB078390180BD73E00582EF3 /* MapViewController.h */,
+				DB078391180BD73E00582EF3 /* MapViewController.m */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		DB078393180BD7C700582EF3 /* SettingsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB078394180BD7D700582EF3 /* SettingsTableViewController.h */,
+				DB078395180BD7D700582EF3 /* SettingsTableViewController.m */,
+			);
+			path = SettingsTableViewController;
+			sourceTree = "<group>";
+		};
 		DB1017151801D5A20012D6CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +244,38 @@
 			path = ServiceProvider;
 			sourceTree = "<group>";
 		};
+		DBC1DD6B180BC32E00E00B27 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DB078393180BD7C700582EF3 /* SettingsTableViewController */,
+				DB07838F180BD73100582EF3 /* MapViewController */,
+				DB07838B180BD63C00582EF3 /* TrackSearchViewController */,
+				DB078387180BD59D00582EF3 /* FavouritesTableViewController */,
+				DB078382180BCE7000582EF3 /* AboutViewController */,
+				DB078336180BCA6C00582EF3 /* MenuTableViewContoller */,
+				DB078337180BCA6C00582EF3 /* RoutesTableViewController */,
+				DBC1DD6C180BC32E00E00B27 /* Common */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DBC1DD6C180BC32E00E00B27 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DBC1DD71180BC37D00E00B27 /* NGTSidePanelController */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DBC1DD71180BC37D00E00B27 /* NGTSidePanelController */ = {
+			isa = PBXGroup;
+			children = (
+				DBC1DD72180BC39B00E00B27 /* NGTSidePanelController.h */,
+				DBC1DD73180BC39B00E00B27 /* NGTSidePanelController.m */,
+			);
+			path = NGTSidePanelController;
+			sourceTree = "<group>";
+		};
 		DBFADC8817FDCC97005EBE0E = {
 			isa = PBXGroup;
 			children = (
@@ -193,11 +309,11 @@
 		DBFADC9A17FDCC97005EBE0E /* NGTMap */ = {
 			isa = PBXGroup;
 			children = (
+				DBC1DD6B180BC32E00E00B27 /* UI */,
 				DBFADCBD17FDCCF5005EBE0E /* Categories */,
 				DBFADCCF17FDCEA0005EBE0E /* Utils */,
 				DBFADCCE17FDCE54005EBE0E /* DAL */,
 				DB1017151801D5A20012D6CF /* Models */,
-				DBFADCD417FDCF5E005EBE0E /* Controllers */,
 				DBFADCA317FDCC97005EBE0E /* AppDelegate.h */,
 				DBFADCA417FDCC97005EBE0E /* AppDelegate.m */,
 				DBFADCAC17FDCC97005EBE0E /* MainStoryboard.storyboard */,
@@ -256,14 +372,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		DBFADCD417FDCF5E005EBE0E /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				DBFADCDD17FDD180005EBE0E /* SearchViewContoller */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		DBFADCD617FDCFB7005EBE0E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,15 +385,6 @@
 			children = (
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		DBFADCDD17FDD180005EBE0E /* SearchViewContoller */ = {
-			isa = PBXGroup;
-			children = (
-				DBFADCDE17FDD199005EBE0E /* SearchViewContoller.h */,
-				DBFADCDF17FDD199005EBE0E /* SearchViewContoller.m */,
-			);
-			path = SearchViewContoller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,17 +493,24 @@
 				DBFADCC917FDCD30005EBE0E /* NSObject-ClassName.m in Sources */,
 				DBFADCCA17FDCD30005EBE0E /* UITableViewCellAdditions.m in Sources */,
 				DBFADCCB17FDCD30005EBE0E /* UIView+Animations.m in Sources */,
+				DB078396180BD7D700582EF3 /* SettingsTableViewController.m in Sources */,
 				DBFADCCC17FDCD30005EBE0E /* UIView+Creation.m in Sources */,
 				DBFADCCD17FDCD30005EBE0E /* UIView+Frame.m in Sources */,
 				DBFADCD217FDCEA0005EBE0E /* Constants.m in Sources */,
-				DBFADCE017FDD199005EBE0E /* SearchViewContoller.m in Sources */,
 				DB76832917FDE2F100305BFD /* ServiceProvider.m in Sources */,
 				DB1017181801D5B80012D6CF /* DataObject.m in Sources */,
 				DB10171F1801D6810012D6CF /* SimplePointTrack.m in Sources */,
+				DBC1DD74180BC39B00E00B27 /* NGTSidePanelController.m in Sources */,
 				DB1017221801D6B10012D6CF /* StopPointTrack.m in Sources */,
+				DB07838A180BD5B100582EF3 /* FavouritesTableViewController.m in Sources */,
+				DB078385180BCE8200582EF3 /* AboutViewController.m in Sources */,
 				DB1017251801D6D30012D6CF /* Route.m in Sources */,
 				DB1017281801D7620012D6CF /* Track.m in Sources */,
+				DB07833D180BCA8700582EF3 /* RoutesTableViewController.m in Sources */,
 				DB10172B1801D78C0012D6CF /* TransportUnit.m in Sources */,
+				DB07833A180BCA7B00582EF3 /* MenuTableViewController.m in Sources */,
+				DB07838E180BD6BF00582EF3 /* TrackSearchViewController.m in Sources */,
+				DB078392180BD73E00582EF3 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +561,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -479,7 +585,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

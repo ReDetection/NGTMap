@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_ISO8601DateFormatterValueTransformer 5
 #define COCOAPODS_VERSION_PATCH_ISO8601DateFormatterValueTransformer 0
 
+// JASidePanels
+#define COCOAPODS_POD_AVAILABLE_JASidePanels
+#define COCOAPODS_VERSION_MAJOR_JASidePanels 1
+#define COCOAPODS_VERSION_MINOR_JASidePanels 3
+#define COCOAPODS_VERSION_PATCH_JASidePanels 2
+
 // MBProgressHUD
 #define COCOAPODS_POD_AVAILABLE_MBProgressHUD
 #define COCOAPODS_VERSION_MAJOR_MBProgressHUD 0
