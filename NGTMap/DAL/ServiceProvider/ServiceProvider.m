@@ -77,8 +77,8 @@ static ServiceProvider *instance = nil;
                                                        @"type_transport": @"type",
                                                        @"title": @"title",
                                                        @"title_old": @"oldTitle",
-                                                       @"stop_begin": @"stop_begin",
-                                                       @"stop_end": @"stop_end"
+                                                       @"name_begin": @"stopBegin",
+                                                       @"name_end": @"stopEnd"
                                                        }];
     
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:routeMapping

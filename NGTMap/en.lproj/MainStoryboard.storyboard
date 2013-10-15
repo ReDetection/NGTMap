@@ -241,6 +241,13 @@
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="favouriteButton" destination="8ZC-Bk-fTy" id="hlo-Ix-t6U"/>
+                                    <outlet property="routeStopBeginLabel" destination="mHf-In-Vai" id="Hax-IR-3G2"/>
+                                    <outlet property="routeStopEndLabel" destination="UzL-Up-VOL" id="LAT-4p-xHz"/>
+                                    <outlet property="routeTitleLabel" destination="t0G-BE-P7E" id="pZy-xg-etl"/>
+                                    <outlet property="routeTypeImageView" destination="2Fy-o3-J9K" id="JiR-wL-x8o"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>

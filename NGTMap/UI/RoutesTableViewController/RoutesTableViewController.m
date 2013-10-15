@@ -7,36 +7,27 @@
 //
 
 #import "RoutesTableViewController.h"
+#import "RoutesTableViewCell.h"
+#import "Route.h"
 
 #define ROUTES_TABLEVIEW_CELL_IDENTIFIER @"RoutesCellIdentifier"
 
 @interface RoutesTableViewController ()
 
+@property (strong, nonatomic) NSDictionary *routeTypeImageNames;
 @property (strong, nonatomic) NSArray *routes;
 
 @end
 
 @implementation RoutesTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.routeTypeImageNames = @{[NSNumber numberWithInteger:BusRouteType]: @"routes_bus_icon.png", [NSNumber numberWithInteger:TrolleyBusRouteType]: @"routes_trolleybus_icon.png", [NSNumber numberWithInteger:TramRouteType]: @"routes_trambus_icon.png", [NSNumber numberWithInteger:MicroBusRouteType]: @"routes_microbus_icon.png"};
 
     [self updateData];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)updateData {
@@ -52,10 +43,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"RoutesCellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    RoutesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ROUTES_TABLEVIEW_CELL_IDENTIFIER forIndexPath:indexPath];
     
-    // Configure the cell...
+    Route *route = _routes[indexPath.row];
+    cell.routeTitleLabel.text = [NSString stringWithFormat:@"%@ (%@)",route.title, route.oldTitle];
+    cell.routeStopBeginLabel.text = route.stopBegin;
+    cell.routeStopEndLabel.text = route.stopEnd;
+    
+    NSString *imageTypeName = [_routeTypeImageNames objectForKey:route.type];
+    cell.routeTypeImageView.image = [UIImage imageNamed:imageTypeName];
     
     return cell;
 }

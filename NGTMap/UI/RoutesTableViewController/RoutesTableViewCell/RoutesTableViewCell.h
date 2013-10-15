@@ -10,4 +10,10 @@
 
 @interface RoutesTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *routeTypeImageView;
+@property (weak, nonatomic) IBOutlet UILabel *routeTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *routeStopBeginLabel;
+@property (weak, nonatomic) IBOutlet UILabel *routeStopEndLabel;
+@property (weak, nonatomic) IBOutlet UIButton *favouriteButton;
+
 @end
