@@ -232,17 +232,31 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZC-Bk-fTy">
-                                            <rect key="frame" x="254" y="15" width="46" height="30"/>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZC-Bk-fTy">
+                                            <rect key="frame" x="216" y="15" width="84" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Лайк">
+                                            <state key="normal" title="Добавить">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="addToFavouriteAction:" destination="B0w-Cg-l1q" eventType="touchUpInside" id="Or5-OQ-G0c"/>
+                                            </connections>
+                                        </button>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwt-R7-BII">
+                                            <rect key="frame" x="232" y="15" width="68" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Удалить">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="removeFromFavouritesAction:" destination="B0w-Cg-l1q" eventType="touchUpInside" id="O7z-Eo-IbL"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="favouriteButton" destination="8ZC-Bk-fTy" id="hlo-Ix-t6U"/>
+                                    <outlet property="addToFavouritesButton" destination="8ZC-Bk-fTy" id="Vpq-Iy-ztQ"/>
+                                    <outlet property="removeFromFavouritesButton" destination="Gwt-R7-BII" id="yyj-JS-EH9"/>
                                     <outlet property="routeStopBeginLabel" destination="mHf-In-Vai" id="Hax-IR-3G2"/>
                                     <outlet property="routeStopEndLabel" destination="UzL-Up-VOL" id="LAT-4p-xHz"/>
                                     <outlet property="routeTitleLabel" destination="t0G-BE-P7E" id="pZy-xg-etl"/>

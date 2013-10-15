@@ -24,6 +24,7 @@
 		DB1017251801D6D30012D6CF /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017241801D6D30012D6CF /* Route.m */; };
 		DB1017281801D7620012D6CF /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017271801D7620012D6CF /* Track.m */; };
 		DB10172B1801D78C0012D6CF /* TransportUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10172A1801D78C0012D6CF /* TransportUnit.m */; };
+		DB6F2BBB180D221C008B70FB /* FavouritesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6F2BBA180D221C008B70FB /* FavouritesManager.m */; };
 		DB76832917FDE2F100305BFD /* ServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DB76832817FDE2F100305BFD /* ServiceProvider.m */; };
 		DBC1DD74180BC39B00E00B27 /* NGTSidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC1DD73180BC39B00E00B27 /* NGTSidePanelController.m */; };
 		DBFADC9517FDCC97005EBE0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9417FDCC97005EBE0E /* UIKit.framework */; };
@@ -80,6 +81,9 @@
 		DB1017271801D7620012D6CF /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		DB1017291801D78C0012D6CF /* TransportUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportUnit.h; sourceTree = "<group>"; };
 		DB10172A1801D78C0012D6CF /* TransportUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportUnit.m; sourceTree = "<group>"; };
+		DB6F2BB9180D221C008B70FB /* FavouritesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritesManager.h; sourceTree = "<group>"; };
+		DB6F2BBA180D221C008B70FB /* FavouritesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesManager.m; sourceTree = "<group>"; };
+		DB6F2BBC180D2496008B70FB /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		DB76832717FDE2F100305BFD /* ServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceProvider.h; sourceTree = "<group>"; };
 		DB76832817FDE2F100305BFD /* ServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceProvider.m; sourceTree = "<group>"; };
 		DBC1DD72180BC39B00E00B27 /* NGTSidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGTSidePanelController.h; sourceTree = "<group>"; };
@@ -272,6 +276,15 @@
 			path = TransportUnit;
 			sourceTree = "<group>";
 		};
+		DB6F2BB8180D2201008B70FB /* FavouritesManager */ = {
+			isa = PBXGroup;
+			children = (
+				DB6F2BB9180D221C008B70FB /* FavouritesManager.h */,
+				DB6F2BBA180D221C008B70FB /* FavouritesManager.m */,
+			);
+			path = FavouritesManager;
+			sourceTree = "<group>";
+		};
 		DB76832617FDE2DB00305BFD /* ServiceProvider */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +409,7 @@
 		DBFADCCE17FDCE54005EBE0E /* DAL */ = {
 			isa = PBXGroup;
 			children = (
+				DB6F2BB8180D2201008B70FB /* FavouritesManager */,
 				DB0783A6180BFC7E00582EF3 /* DataManager */,
 				DB76832617FDE2DB00305BFD /* ServiceProvider */,
 			);
@@ -407,6 +421,7 @@
 			children = (
 				DBFADCD017FDCEA0005EBE0E /* Constants.h */,
 				DBFADCD117FDCEA0005EBE0E /* Constants.m */,
+				DB6F2BBC180D2496008B70FB /* Macros.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -550,6 +565,7 @@
 				DB07833D180BCA8700582EF3 /* RoutesTableViewController.m in Sources */,
 				DB0783A1180BF35800582EF3 /* StartScreenViewController.m in Sources */,
 				DB10172B1801D78C0012D6CF /* TransportUnit.m in Sources */,
+				DB6F2BBB180D221C008B70FB /* FavouritesManager.m in Sources */,
 				DB07833A180BCA7B00582EF3 /* MenuTableViewController.m in Sources */,
 				DB07838E180BD6BF00582EF3 /* TrackSearchViewController.m in Sources */,
 				DB078392180BD73E00582EF3 /* MapViewController.m in Sources */,

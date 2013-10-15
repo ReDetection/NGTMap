@@ -13,7 +13,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[ServiceProvider sharedProvider] configureMappings];
-        
+    [FavouritesManager sharedManager];
+
     return YES;
 }
 							

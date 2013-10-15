@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *routeTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *routeStopBeginLabel;
 @property (weak, nonatomic) IBOutlet UILabel *routeStopEndLabel;
-@property (weak, nonatomic) IBOutlet UIButton *favouriteButton;
+@property (weak, nonatomic) IBOutlet UIButton *addToFavouritesButton;
+@property (weak, nonatomic) IBOutlet UIButton *removeFromFavouritesButton;
+
 
 @end
