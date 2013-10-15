@@ -68,7 +68,7 @@
     NSInteger tag = ((UIButton *)sender).tag;
     
     Route *route = _routes[tag];
-    [[FavouritesManager sharedManager] addRouteID:route.identifier];
+    [[DataManager sharedManager].favouritesStorage addRouteID:route.identifier];
     
     RoutesTableViewCell *cell = (RoutesTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:tag inSection:0]];
     [self updateFavouiritesButtonsForCell:cell withRoute:route];
@@ -78,7 +78,7 @@
     NSInteger tag = ((UIButton *)sender).tag;
     
     Route *route = _routes[tag];
-    [[FavouritesManager sharedManager] removeRouteID:route.identifier];
+    [[DataManager sharedManager].favouritesStorage removeRouteID:route.identifier];
     
     RoutesTableViewCell *cell = (RoutesTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:tag inSection:0]];
     [self updateFavouiritesButtonsForCell:cell withRoute:route];
@@ -87,7 +87,7 @@
 #pragma mark - Private methods
 
 - (void)updateFavouiritesButtonsForCell: (RoutesTableViewCell *)cell withRoute: (Route *)route{
-    if ([[FavouritesManager sharedManager] isContainRouteID:route.identifier]) {
+    if ([[DataManager sharedManager].favouritesStorage isContainRouteID:route.identifier]) {
         cell.addToFavouritesButton.hidden = YES;
         cell.removeFromFavouritesButton.hidden = NO;
     } else {

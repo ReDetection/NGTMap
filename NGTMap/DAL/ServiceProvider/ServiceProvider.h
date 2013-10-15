@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef void (^AllRoutesSuccessBlock)(NSArray *routes);
+typedef void (^AllRoutesSuccessBlock)(NSArray *routes);
 
 @interface ServiceProvider : NSObject
 

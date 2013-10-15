@@ -21,4 +21,14 @@ static DataManager *instance = nil;
     return instance;
 }
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.favouritesStorage = [[FavouritesStorage alloc] init];
+        self.mapStorage = [[MapStorage alloc] init];
+    }
+    
+    return self;
+}
+
 @end

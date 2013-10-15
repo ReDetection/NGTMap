@@ -15,6 +15,5 @@
     #import "Constants.h"
     #import "ServiceProvider.h"
     #import "DataManager.h"
-    #import "FavouritesManager.h"
     #import "Macros.h"
 #endif
