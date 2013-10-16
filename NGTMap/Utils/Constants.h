@@ -15,6 +15,12 @@ typedef enum {
     MicroBusRouteType = 8
 } RouteType;
 
+typedef enum {
+    DirectDirectionType = 0,
+    ReverseDirectionType = 1,
+    BothDirectionType = 2,
+} DirectionType;
+
 typedef void (^SimpleCompletionBlock)();
 typedef void (^SimpleFailBlock)(NSError *error);
 
@@ -25,6 +31,9 @@ extern NSString *const kServerApiVersion;
 extern NSString *const kServerApiKey;
 extern NSString *const kServerApiFormat;
 
+extern NSString *const kCustomValueInPath;
+
 extern NSString *const kRoutesPath;
+extern NSString *const kTransportUnitsByIdsPath;
 
 @end

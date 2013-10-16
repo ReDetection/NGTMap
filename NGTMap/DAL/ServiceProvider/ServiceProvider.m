@@ -9,6 +9,7 @@
 #import "ServiceProvider.h"
 
 #import "Route.h"
+#import "TransportUnit.h"
 
 
 #import <RestKit/RestKit.h>
@@ -53,7 +54,32 @@ static ServiceProvider *instance = nil;
 }
 
 - (void)getTransportUnitsByRoutesAndDirections: (NSArray *)routesWithDirections successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
+    NSString *routesWithDirectionsString = [routesWithDirections.description stringByReplacingOccurrencesOfString:@"(" withString:@"["];
+    routesWithDirectionsString = [routesWithDirectionsString stringByReplacingOccurrencesOfString:@")" withString:@"]"];
+    routesWithDirectionsString =[routesWithDirectionsString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    routesWithDirectionsString =[routesWithDirectionsString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     
+    NSString *requestPath = [kTransportUnitsByIdsPath stringByReplacingOccurrencesOfString:kCustomValueInPath withString:routesWithDirectionsString];
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:requestPath parameters:_baseRequestParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        NSArray *array = mappingResult.array;
+        if (successHandler)
+            successHandler(array);
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failHandler)
+            failHandler(error);
+    }];
+}
+
+- (void)getTransportUnitsByRoutes: (NSArray *)routes successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
+    NSMutableArray *resultArrayWithDirections = [NSMutableArray array];
+    [routes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *routeId = obj;
+        NSArray *routesWithDirections = @[routeId, [NSString stringWithFormat:@"%d", BothDirectionType]];
+        [resultArrayWithDirections addObject:routesWithDirections];
+    }];
+    
+    [self getTransportUnitsByRoutesAndDirections:resultArrayWithDirections successHandler:successHandler failHandler:failHandler];
 }
 
 #pragma mark - Mappings
@@ -66,9 +92,46 @@ static ServiceProvider *instance = nil;
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"application/json"];
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    NSTimeZone *timezone = [NSTimeZone timeZoneForSecondsFromGMT:60 * 60 * 7];
+    [dateFormatter setTimeZone: timezone];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [RKObjectMapping addDefaultDateFormatter:dateFormatter];
+    
     [[RKObjectManager sharedManager] setRequestSerializationMIMEType:RKMIMETypeJSON];
     
     [self configureRoutes];
+    [self configureTransportUnits];
+}
+
+- (void)configureTransportUnits {
+    NSIndexSet *successStatusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
+    
+    RKObjectMapping *trasportUnit = [RKObjectMapping mappingForClass:[TransportUnit class]];
+    [trasportUnit addAttributeMappingsFromDictionary:@{
+                                                       @"id_alias": @"routeIdentifier",
+                                                       @"title": @"routeTitle",
+                                                       @"title_old": @"routeOldTitle",
+                                                       @"type_transport": @"routeType",
+                                                       @"direction": @"direction",
+                                                       @"lat": @"latitude",
+                                                       @"lng": @"longitude",
+                                                       @"azimuth": @"azimuth",
+                                                       @"time": @"time",
+                                                       @"speed": @"speed",
+                                                       @"offline": @"offlineStatus",
+                                                       @"schedule": @"schedule"
+                                                       }];
+    
+    
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:trasportUnit
+                                                                                            method:RKRequestMethodGET
+                                                                                       pathPattern:kTransportUnitsByIdsPath
+                                                                                           keyPath:@"data"
+                                                                                       statusCodes:successStatusCodes];
+    
+    [[RKObjectManager sharedManager] addResponseDescriptor:responseDescriptor];
+    
 }
 
 - (void)configureRoutes {

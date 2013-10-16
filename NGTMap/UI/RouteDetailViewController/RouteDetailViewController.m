@@ -37,6 +37,13 @@
     [super viewDidLoad];
     
     self.routeTypeImageNames = @{[NSNumber numberWithInteger:BusRouteType]: @"routes_bus_icon.png", [NSNumber numberWithInteger:TrolleyBusRouteType]: @"routes_trolleybus_icon.png", [NSNumber numberWithInteger:TramRouteType]: @"routes_trambus_icon.png", [NSNumber numberWithInteger:MicroBusRouteType]: @"routes_microbus_icon.png"};
+    
+    NSArray *routesArray = @[_route.identifier];
+    [[ServiceProvider sharedProvider] getTransportUnitsByRoutes:routesArray successHandler:^(NSArray *transportUnits) {
+        NSLog(@"transportUnits - %@", transportUnits);
+    } failHandler:^(NSError *error) {
+        
+    }];
 	
     [self updateData];
 }
