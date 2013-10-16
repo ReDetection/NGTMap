@@ -13,11 +13,16 @@
 @interface TransportUnit : DataObject
 
 @property (strong, nonatomic) NSString *routeIdentifier;
+@property (strong, nonatomic) NSString *routeTitle;
+@property (strong, nonatomic) NSString *routeOldTitle;
+@property (strong, nonatomic) NSNumber *routeType;
 @property (assign, nonatomic) NSInteger direction;
 @property (assign, nonatomic) CGFloat latitude;
 @property (assign, nonatomic) CGFloat longitude;
 @property (assign, nonatomic) CGFloat azimuth;
 @property (strong, nonatomic) NSDate *time;
 @property (assign, nonatomic) CGFloat speed;
+@property (assign, nonatomic) NSInteger offlineStatus;
+@property (strong, nonatomic) NSArray *schedule;
 
 @end

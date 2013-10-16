@@ -10,13 +10,6 @@
 
 //Маршрут
 
-typedef enum {
-    BusRouteType = 1,
-    TrolleyBusRouteType = 2,
-    TramRouteType = 3,
-    MicroBusRouteType = 8
-} RouteType;
-
 @interface Route : DataObject
 
 @property (strong, nonatomic) NSString *identifier;

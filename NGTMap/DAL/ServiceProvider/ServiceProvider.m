@@ -52,6 +52,10 @@ static ServiceProvider *instance = nil;
     }];
 }
 
+- (void)getTransportUnitsByRoutesAndDirections: (NSArray *)routesWithDirections successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
+    
+}
+
 #pragma mark - Mappings
 
 - (void)configureMappings {

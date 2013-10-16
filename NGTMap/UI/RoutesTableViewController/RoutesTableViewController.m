@@ -8,14 +8,20 @@
 
 #import "RoutesTableViewController.h"
 #import "RoutesTableViewCell.h"
+#import "RouteDetailViewController.h"
 #import "Route.h"
 
 #define ROUTES_TABLEVIEW_CELL_IDENTIFIER @"RoutesCellIdentifier"
+
+#define ROUTE_DETAIL_SEQUE_IDENTIFIER @"showRouteDetailIdentifier"
 
 @interface RoutesTableViewController ()
 
 @property (strong, nonatomic) NSDictionary *routeTypeImageNames;
 @property (strong, nonatomic) NSArray *routes;
+
+- (IBAction)addToFavouriteAction:(id)sender;
+- (IBAction)removeFromFavouritesAction:(id)sender;
 
 @end
 
@@ -26,7 +32,11 @@
     [super viewDidLoad];
     
     self.routeTypeImageNames = @{[NSNumber numberWithInteger:BusRouteType]: @"routes_bus_icon.png", [NSNumber numberWithInteger:TrolleyBusRouteType]: @"routes_trolleybus_icon.png", [NSNumber numberWithInteger:TramRouteType]: @"routes_trambus_icon.png", [NSNumber numberWithInteger:MicroBusRouteType]: @"routes_microbus_icon.png"};
+}
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     [self updateData];
 }
 
@@ -34,8 +44,6 @@
     self.routes = [DataManager sharedManager].routes;
     [self.tableView reloadData];
 }
-
-
 
 #pragma mark - Table view data source
 
@@ -84,6 +92,7 @@
     [self updateFavouiritesButtonsForCell:cell withRoute:route];
 }
 
+
 #pragma mark - Private methods
 
 - (void)updateFavouiritesButtonsForCell: (RoutesTableViewCell *)cell withRoute: (Route *)route{
@@ -96,16 +105,19 @@
     }
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:ROUTE_DETAIL_SEQUE_IDENTIFIER]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        RouteDetailViewController *routeDetailVC =  [segue destinationViewController];
+        routeDetailVC.route = _routes[indexPath.row];
+    }
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-
- */
 
 @end

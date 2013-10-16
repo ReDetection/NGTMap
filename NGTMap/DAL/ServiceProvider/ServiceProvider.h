@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef void (^AllRoutesSuccessBlock)(NSArray *routes);
-typedef void (^AllRoutesSuccessBlock)(NSArray *routes);
+typedef void (^TransportUnitsByRouteAndDirectionsSuccessBlock)(NSArray *routes);
 
 @interface ServiceProvider : NSObject
 
@@ -17,5 +17,6 @@ typedef void (^AllRoutesSuccessBlock)(NSArray *routes);
 - (void)configureMappings;
 
 - (void)getAllRoutesSuccessHandler: (AllRoutesSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
+- (void)getTransportUnitsByRoutesAndDirections: (NSArray *)routesWithDirections successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
 
 @end

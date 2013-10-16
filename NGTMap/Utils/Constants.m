@@ -11,7 +11,7 @@
 @implementation Constants
 
 NSString *const kServerAddress = @"http://api.nskgortrans.ru";
-NSString *const kServerApiVersion = @"0.2";
+NSString *const kServerApiVersion = @"0.3";
 NSString *const kServerApiKey = @"1281ecb12bc158e445c20996f67ad8a0";
 NSString *const kServerApiFormat = @"json";
 

@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    BusRouteType = 1,
+    TrolleyBusRouteType = 2,
+    TramRouteType = 3,
+    MicroBusRouteType = 8
+} RouteType;
+
 typedef void (^SimpleCompletionBlock)();
 typedef void (^SimpleFailBlock)(NSError *error);
 
@@ -19,19 +26,5 @@ extern NSString *const kServerApiKey;
 extern NSString *const kServerApiFormat;
 
 extern NSString *const kRoutesPath;
-
-//extern NSString *const kRoundsPath;
-//extern NSString *const kGamesPath;
-//extern NSString *const kGamePath;
-//extern NSString *const kEventsPath;
-//extern NSString *const kRegistrationPath;
-//extern NSString *const kLoginPath;
-//extern NSString *const kCommentsPath;
-//extern NSString *const kEventCommentsPath;
-//extern NSString *const kAddCommentToMatchPath;
-//extern NSString *const kAddCommentToEventPath;
-//extern NSString *const kVoteOnEvent;
-//
-//extern NSString *const kDefaultAppName;
 
 @end

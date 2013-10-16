@@ -18,6 +18,11 @@
 		DB0783A1180BF35800582EF3 /* StartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0783A0180BF35800582EF3 /* StartScreenViewController.m */; };
 		DB0783A9180BFC8D00582EF3 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0783A8180BFC8D00582EF3 /* DataManager.m */; };
 		DB0783AD180C03B400582EF3 /* RoutesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0783AC180C03B400582EF3 /* RoutesTableViewCell.m */; };
+		DB0BE642180E6872002D1020 /* routes_trolleybus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0BE63E180E6872002D1020 /* routes_trolleybus_icon.png */; };
+		DB0BE643180E6872002D1020 /* routes_bus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0BE63F180E6872002D1020 /* routes_bus_icon.png */; };
+		DB0BE644180E6872002D1020 /* routes_trambus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0BE640180E6872002D1020 /* routes_trambus_icon.png */; };
+		DB0BE645180E6872002D1020 /* routes_microbus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0BE641180E6872002D1020 /* routes_microbus_icon.png */; };
+		DB0BE648180E711A002D1020 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0BE647180E711A002D1020 /* MapKit.framework */; };
 		DB1017181801D5B80012D6CF /* DataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017171801D5B80012D6CF /* DataObject.m */; };
 		DB10171F1801D6810012D6CF /* SimplePointTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10171E1801D6810012D6CF /* SimplePointTrack.m */; };
 		DB1017221801D6B10012D6CF /* StopPointTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017211801D6B10012D6CF /* StopPointTrack.m */; };
@@ -26,6 +31,7 @@
 		DB10172B1801D78C0012D6CF /* TransportUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10172A1801D78C0012D6CF /* TransportUnit.m */; };
 		DB6F2BC3180D6863008B70FB /* FavouritesStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6F2BC2180D6863008B70FB /* FavouritesStorage.m */; };
 		DB6F2BC6180D6874008B70FB /* MapStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6F2BC5180D6874008B70FB /* MapStorage.m */; };
+		DB6F2BCA180E33EA008B70FB /* RouteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6F2BC9180E33EA008B70FB /* RouteDetailViewController.m */; };
 		DB76832917FDE2F100305BFD /* ServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DB76832817FDE2F100305BFD /* ServiceProvider.m */; };
 		DBC1DD74180BC39B00E00B27 /* NGTSidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC1DD73180BC39B00E00B27 /* NGTSidePanelController.m */; };
 		DBFADC9517FDCC97005EBE0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9417FDCC97005EBE0E /* UIKit.framework */; };
@@ -70,6 +76,11 @@
 		DB0783A8180BFC8D00582EF3 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		DB0783AB180C03B400582EF3 /* RoutesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesTableViewCell.h; sourceTree = "<group>"; };
 		DB0783AC180C03B400582EF3 /* RoutesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesTableViewCell.m; sourceTree = "<group>"; };
+		DB0BE63E180E6872002D1020 /* routes_trolleybus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = routes_trolleybus_icon.png; sourceTree = "<group>"; };
+		DB0BE63F180E6872002D1020 /* routes_bus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = routes_bus_icon.png; sourceTree = "<group>"; };
+		DB0BE640180E6872002D1020 /* routes_trambus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = routes_trambus_icon.png; sourceTree = "<group>"; };
+		DB0BE641180E6872002D1020 /* routes_microbus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = routes_microbus_icon.png; sourceTree = "<group>"; };
+		DB0BE647180E711A002D1020 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DB1017161801D5B80012D6CF /* DataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataObject.h; sourceTree = "<group>"; };
 		DB1017171801D5B80012D6CF /* DataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataObject.m; sourceTree = "<group>"; };
 		DB10171D1801D6810012D6CF /* SimplePointTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePointTrack.h; sourceTree = "<group>"; };
@@ -87,6 +98,8 @@
 		DB6F2BC2180D6863008B70FB /* FavouritesStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesStorage.m; sourceTree = "<group>"; };
 		DB6F2BC4180D6874008B70FB /* MapStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapStorage.h; sourceTree = "<group>"; };
 		DB6F2BC5180D6874008B70FB /* MapStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapStorage.m; sourceTree = "<group>"; };
+		DB6F2BC8180E33EA008B70FB /* RouteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteDetailViewController.h; sourceTree = "<group>"; };
+		DB6F2BC9180E33EA008B70FB /* RouteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailViewController.m; sourceTree = "<group>"; };
 		DB76832717FDE2F100305BFD /* ServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceProvider.h; sourceTree = "<group>"; };
 		DB76832817FDE2F100305BFD /* ServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceProvider.m; sourceTree = "<group>"; };
 		DBC1DD72180BC39B00E00B27 /* NGTSidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGTSidePanelController.h; sourceTree = "<group>"; };
@@ -126,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0BE648180E711A002D1020 /* MapKit.framework in Frameworks */,
 				DBFADCD917FDD029005EBE0E /* QuartzCore.framework in Frameworks */,
 				DBFADC9517FDCC97005EBE0E /* UIKit.framework in Frameworks */,
 				DBFADC9717FDCC97005EBE0E /* Foundation.framework in Frameworks */,
@@ -228,6 +242,33 @@
 			path = RoutesTableViewCell;
 			sourceTree = "<group>";
 		};
+		DB0BE63B180E67B9002D1020 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB0BE63C180E680F002D1020 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DB0BE63C180E680F002D1020 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DB0BE63D180E680F002D1020 /* Routes */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		DB0BE63D180E680F002D1020 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				DB0BE63E180E6872002D1020 /* routes_trolleybus_icon.png */,
+				DB0BE63F180E6872002D1020 /* routes_bus_icon.png */,
+				DB0BE640180E6872002D1020 /* routes_trambus_icon.png */,
+				DB0BE641180E6872002D1020 /* routes_microbus_icon.png */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
 		DB1017151801D5A20012D6CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +347,15 @@
 			path = MapStorage;
 			sourceTree = "<group>";
 		};
+		DB6F2BC7180E3394008B70FB /* RouteDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB6F2BC8180E33EA008B70FB /* RouteDetailViewController.h */,
+				DB6F2BC9180E33EA008B70FB /* RouteDetailViewController.m */,
+			);
+			path = RouteDetailViewController;
+			sourceTree = "<group>";
+		};
 		DB76832617FDE2DB00305BFD /* ServiceProvider */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +368,7 @@
 		DBC1DD6B180BC32E00E00B27 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DB6F2BC7180E3394008B70FB /* RouteDetailViewController */,
 				DB07839E180BF34800582EF3 /* StartScreenViewController */,
 				DB078393180BD7C700582EF3 /* SettingsTableViewController */,
 				DB07838F180BD73100582EF3 /* MapViewController */,
@@ -369,6 +420,7 @@
 		DBFADC9317FDCC97005EBE0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB0BE647180E711A002D1020 /* MapKit.framework */,
 				DBFADCD817FDD029005EBE0E /* QuartzCore.framework */,
 				DBFADC9417FDCC97005EBE0E /* UIKit.framework */,
 				DBFADC9617FDCC97005EBE0E /* Foundation.framework */,
@@ -389,8 +441,8 @@
 				DBFADCA317FDCC97005EBE0E /* AppDelegate.h */,
 				DBFADCA417FDCC97005EBE0E /* AppDelegate.m */,
 				DBFADCAC17FDCC97005EBE0E /* MainStoryboard.storyboard */,
+				DB0BE63B180E67B9002D1020 /* Resources */,
 				DBFADC9B17FDCC97005EBE0E /* Supporting Files */,
-				DBFADCD617FDCFB7005EBE0E /* Resources */,
 			);
 			path = NGTMap;
 			sourceTree = "<group>";
@@ -447,21 +499,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		DBFADCD617FDCFB7005EBE0E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				DBFADCD717FDCFCC005EBE0E /* Images */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		DBFADCD717FDCFCC005EBE0E /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -516,10 +553,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBFADC9F17FDCC97005EBE0E /* InfoPlist.strings in Resources */,
+				DB0BE645180E6872002D1020 /* routes_microbus_icon.png in Resources */,
+				DB0BE644180E6872002D1020 /* routes_trambus_icon.png in Resources */,
 				DBFADCA717FDCC97005EBE0E /* Default.png in Resources */,
 				DBFADCA917FDCC97005EBE0E /* Default@2x.png in Resources */,
 				DBFADCAB17FDCC97005EBE0E /* Default-568h@2x.png in Resources */,
+				DB0BE643180E6872002D1020 /* routes_bus_icon.png in Resources */,
 				DBFADCAE17FDCC97005EBE0E /* MainStoryboard.storyboard in Resources */,
+				DB0BE642180E6872002D1020 /* routes_trolleybus_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +623,7 @@
 				DBC1DD74180BC39B00E00B27 /* NGTSidePanelController.m in Sources */,
 				DB1017221801D6B10012D6CF /* StopPointTrack.m in Sources */,
 				DB07838A180BD5B100582EF3 /* FavouritesTableViewController.m in Sources */,
+				DB6F2BCA180E33EA008B70FB /* RouteDetailViewController.m in Sources */,
 				DB078385180BCE8200582EF3 /* AboutViewController.m in Sources */,
 				DB1017251801D6D30012D6CF /* Route.m in Sources */,
 				DB1017281801D7620012D6CF /* Track.m in Sources */,
