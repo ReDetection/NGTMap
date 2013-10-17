@@ -10,6 +10,8 @@
 
 @interface FavouritesStorage : NSObject
 
+- (id)initWithFilePath: (NSString *)filePath;
+
 - (NSArray *)favouritesRoutes;
 - (BOOL)isContainRouteID: (NSString *)routeID;
 - (void)addRouteID: (NSString *)routeID;

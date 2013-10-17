@@ -58,7 +58,13 @@
         
     }];
     
-    [self.mapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(55.033333, 82.916667), MKCoordinateSpanMake(0.1, 0.1))];
+    [self.mapView setRegion:NOVOSIBIRSK_COORDINATES_REGION];
+    
+    
+    MKPointAnnotation *annot = [[MKPointAnnotation alloc] init];
+    annot.title = @"Title";
+    annot.coordinate = CLLocationCoordinate2DMake(55.033333, 82.916667);
+    [self.mapView addAnnotation:annot];
 	
     [self updateData];
 }

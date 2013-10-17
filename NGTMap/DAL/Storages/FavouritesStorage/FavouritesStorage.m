@@ -8,17 +8,18 @@
 
 #import "FavouritesStorage.h"
 
-#define FAVOURITES_PLIST_NAME @"favourites.plist"
+#define DEFAULT_FAVOURITES_PLIST_NAME @"favourites.plist"
 
 @interface FavouritesStorage()
 
+@property (strong, nonatomic) NSString *filePath;
 @property (strong, nonatomic) NSMutableArray *favouritesRoutes;
 
 @end
 
 @implementation FavouritesStorage
 
-- (id)init {
+- (id)initWithFilePath: (NSString *)filePath {
     self = [super init];
     if (self) {
         self.favouritesRoutes = [[NSMutableArray alloc] initWithContentsOfFile:[self favouritesPlistPath]];
@@ -28,6 +29,11 @@
     }
     
     return self;
+}
+
+
+- (id)init {
+    return [self initWithFilePath:DEFAULT_FAVOURITES_PLIST_NAME];
 }
 
 - (NSArray *)favouritesRoutes {
@@ -57,7 +63,7 @@
 }
 
 - (NSString *)favouritesPlistPath {
-    return [DOCUMENTS_FOLDER stringByAppendingPathComponent:FAVOURITES_PLIST_NAME];
+    return [DOCUMENTS_FOLDER stringByAppendingPathComponent:self.filePath];
 }
 
 @end
