@@ -10,6 +10,9 @@
 
 #import "Route.h"
 #import "TransportUnit.h"
+#import "Track.h"
+#import "SimpleTrackPoint.h"
+#import "StopTrackPoint.h"
 
 
 #import <RestKit/RestKit.h>
@@ -54,11 +57,8 @@ static ServiceProvider *instance = nil;
 }
 
 - (void)getTransportUnitsByRoutesAndDirections: (NSArray *)routesWithDirections successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
-    NSString *routesWithDirectionsString = [routesWithDirections.description stringByReplacingOccurrencesOfString:@"(" withString:@"["];
-    routesWithDirectionsString = [routesWithDirectionsString stringByReplacingOccurrencesOfString:@")" withString:@"]"];
-    routesWithDirectionsString =[routesWithDirectionsString stringByReplacingOccurrencesOfString:@" " withString:@""];
-    routesWithDirectionsString =[routesWithDirectionsString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     
+    NSString *routesWithDirectionsString = [self formattedStringFromArray:routesWithDirections];
     NSString *requestPath = [kTransportUnitsByIdsPath stringByReplacingOccurrencesOfString:kCustomValueInPath withString:routesWithDirectionsString];
     
     [[RKObjectManager sharedManager] getObjectsAtPath:requestPath parameters:_baseRequestParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
@@ -72,6 +72,7 @@ static ServiceProvider *instance = nil;
 }
 
 - (void)getTransportUnitsByRoutes: (NSArray *)routes successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
+    
     NSMutableArray *resultArrayWithDirections = [NSMutableArray array];
     [routes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *routeId = obj;
@@ -82,6 +83,32 @@ static ServiceProvider *instance = nil;
     [self getTransportUnitsByRoutesAndDirections:resultArrayWithDirections successHandler:successHandler failHandler:failHandler];
 }
 
+- (void)getTracksByRoutesAndDirections: (NSArray *)routesWithDirections successHandler: (TracksByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
+    NSString *routesWithDirectionsString = [self formattedStringFromArray:routesWithDirections];
+    NSString *requestPath = [kTracksByIdsPath stringByReplacingOccurrencesOfString:kCustomValueInPath withString:routesWithDirectionsString];
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:requestPath parameters:_baseRequestParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        NSArray *array = mappingResult.array;
+        if (successHandler)
+            successHandler(array);
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failHandler)
+            failHandler(error);
+    }];
+}
+
+- (void)getTracksByRoutes: (NSArray *)routes successHandler: (TracksByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
+    
+    NSMutableArray *resultArrayWithDirections = [NSMutableArray array];
+    [routes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *routeId = obj;
+        NSArray *routesWithDirections = @[routeId, [NSString stringWithFormat:@"%d", BothDirectionType]];
+        [resultArrayWithDirections addObject:routesWithDirections];
+    }];
+    
+    [self getTracksByRoutesAndDirections:resultArrayWithDirections successHandler:successHandler failHandler:failHandler];
+}
+
 #pragma mark - Mappings
 
 - (void)configureMappings {
@@ -90,11 +117,8 @@ static ServiceProvider *instance = nil;
     RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
     [RKObjectManager setSharedManager:objectManager];
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"application/json"];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    NSTimeZone *timezone = [NSTimeZone timeZoneForSecondsFromGMT:60 * 60 * 7];
-    [dateFormatter setTimeZone: timezone];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     [RKObjectMapping addDefaultDateFormatter:dateFormatter];
     
@@ -102,13 +126,46 @@ static ServiceProvider *instance = nil;
     
     [self configureRoutes];
     [self configureTransportUnits];
+    [self configureTracks];
+}
+
+- (void)configureTracks {
+    NSIndexSet *successStatusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
+    
+    RKObjectMapping *trackMapping = [RKObjectMapping mappingForClass:[Track class]];
+    [trackMapping addAttributeMappingsFromDictionary:@{
+                                                @"id_route": @"routeIdentifier",
+                                                @"title": @"routeTitle",
+                                                @"direction": @"direction"
+                                                }];
+        
+    RKObjectMapping *stopTrackPointMapping = [RKObjectMapping mappingForClass:[StopTrackPoint class]];
+    [stopTrackPointMapping addAttributeMappingsFromDictionary:@{
+                                                         @"order": @"order",
+                                                         @"lat": @"latitude",
+                                                         @"lng": @"longitude",
+                                                         @"id_stop": @"identifier",
+                                                         @"name_stop": @"name",
+                                                         @"id_platform": @"platformIdentifier",
+                                                         @"len": @"length"
+                                                         }];
+    
+    [trackMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"trassa" toKeyPath:@"trackPoints" withMapping:stopTrackPointMapping]];
+    
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:trackMapping
+                                                                                            method:RKRequestMethodGET
+                                                                                       pathPattern:kTracksByIdsPath
+                                                                                           keyPath:@"data"
+                                                                                       statusCodes:successStatusCodes];
+    
+    [[RKObjectManager sharedManager] addResponseDescriptor:responseDescriptor];
 }
 
 - (void)configureTransportUnits {
     NSIndexSet *successStatusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
     
-    RKObjectMapping *trasportUnit = [RKObjectMapping mappingForClass:[TransportUnit class]];
-    [trasportUnit addAttributeMappingsFromDictionary:@{
+    RKObjectMapping *trasportUnitMapping = [RKObjectMapping mappingForClass:[TransportUnit class]];
+    [trasportUnitMapping addAttributeMappingsFromDictionary:@{
                                                        @"id_alias": @"routeIdentifier",
                                                        @"title": @"routeTitle",
                                                        @"title_old": @"routeOldTitle",
@@ -124,7 +181,7 @@ static ServiceProvider *instance = nil;
                                                        }];
     
     
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:trasportUnit
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:trasportUnitMapping
                                                                                             method:RKRequestMethodGET
                                                                                        pathPattern:kTransportUnitsByIdsPath
                                                                                            keyPath:@"data"
@@ -156,6 +213,16 @@ static ServiceProvider *instance = nil;
     
     [[RKObjectManager sharedManager] addResponseDescriptor:responseDescriptor];
 
+}
+
+#pragma mark - PrivateMethods
+
+- (NSString *)formattedStringFromArray: (NSArray *)array {
+    NSString *formattedString = [array.description stringByReplacingOccurrencesOfString:@"(" withString:@"["];
+    formattedString = [formattedString stringByReplacingOccurrencesOfString:@")" withString:@"]"];
+    formattedString =[formattedString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    formattedString =[formattedString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    return formattedString;
 }
 
 @end

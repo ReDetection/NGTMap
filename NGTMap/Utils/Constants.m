@@ -19,5 +19,6 @@ NSString *const kCustomValueInPath = @":value";
 
 NSString *const kRoutesPath = @"/route/list/all";
 NSString *const kTransportUnitsByIdsPath = @"/marker/list/ids/:value";
+NSString *const kTracksByIdsPath = @"/trassa/list/ids/:value";
 
 @end

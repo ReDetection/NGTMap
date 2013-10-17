@@ -23,9 +23,10 @@
 		DB0BE644180E6872002D1020 /* routes_trambus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0BE640180E6872002D1020 /* routes_trambus_icon.png */; };
 		DB0BE645180E6872002D1020 /* routes_microbus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0BE641180E6872002D1020 /* routes_microbus_icon.png */; };
 		DB0BE648180E711A002D1020 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0BE647180E711A002D1020 /* MapKit.framework */; };
+		DB0D2AE5180F8A7000D2CC57 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0D2AE4180F8A7000D2CC57 /* CoreLocation.framework */; };
+		DB0D2AE9180F930600D2CC57 /* SimpleTrackPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0D2AE8180F930600D2CC57 /* SimpleTrackPoint.m */; };
+		DB0D2AEC180F932400D2CC57 /* StopTrackPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0D2AEB180F932400D2CC57 /* StopTrackPoint.m */; };
 		DB1017181801D5B80012D6CF /* DataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017171801D5B80012D6CF /* DataObject.m */; };
-		DB10171F1801D6810012D6CF /* SimplePointTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10171E1801D6810012D6CF /* SimplePointTrack.m */; };
-		DB1017221801D6B10012D6CF /* StopPointTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017211801D6B10012D6CF /* StopPointTrack.m */; };
 		DB1017251801D6D30012D6CF /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017241801D6D30012D6CF /* Route.m */; };
 		DB1017281801D7620012D6CF /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017271801D7620012D6CF /* Track.m */; };
 		DB10172B1801D78C0012D6CF /* TransportUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10172A1801D78C0012D6CF /* TransportUnit.m */; };
@@ -81,12 +82,13 @@
 		DB0BE640180E6872002D1020 /* routes_trambus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = routes_trambus_icon.png; sourceTree = "<group>"; };
 		DB0BE641180E6872002D1020 /* routes_microbus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = routes_microbus_icon.png; sourceTree = "<group>"; };
 		DB0BE647180E711A002D1020 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DB0D2AE4180F8A7000D2CC57 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DB0D2AE7180F930600D2CC57 /* SimpleTrackPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTrackPoint.h; sourceTree = "<group>"; };
+		DB0D2AE8180F930600D2CC57 /* SimpleTrackPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTrackPoint.m; sourceTree = "<group>"; };
+		DB0D2AEA180F932400D2CC57 /* StopTrackPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopTrackPoint.h; sourceTree = "<group>"; };
+		DB0D2AEB180F932400D2CC57 /* StopTrackPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopTrackPoint.m; sourceTree = "<group>"; };
 		DB1017161801D5B80012D6CF /* DataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataObject.h; sourceTree = "<group>"; };
 		DB1017171801D5B80012D6CF /* DataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataObject.m; sourceTree = "<group>"; };
-		DB10171D1801D6810012D6CF /* SimplePointTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePointTrack.h; sourceTree = "<group>"; };
-		DB10171E1801D6810012D6CF /* SimplePointTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePointTrack.m; sourceTree = "<group>"; };
-		DB1017201801D6B10012D6CF /* StopPointTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopPointTrack.h; sourceTree = "<group>"; };
-		DB1017211801D6B10012D6CF /* StopPointTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopPointTrack.m; sourceTree = "<group>"; };
 		DB1017231801D6D30012D6CF /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
 		DB1017241801D6D30012D6CF /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		DB1017261801D7620012D6CF /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0D2AE5180F8A7000D2CC57 /* CoreLocation.framework in Frameworks */,
 				DB0BE648180E711A002D1020 /* MapKit.framework in Frameworks */,
 				DBFADCD917FDD029005EBE0E /* QuartzCore.framework in Frameworks */,
 				DBFADC9517FDCC97005EBE0E /* UIKit.framework in Frameworks */,
@@ -269,10 +272,21 @@
 			path = Routes;
 			sourceTree = "<group>";
 		};
+		DB0D2AE6180F92EF00D2CC57 /* TrackPoint */ = {
+			isa = PBXGroup;
+			children = (
+				DB0D2AE7180F930600D2CC57 /* SimpleTrackPoint.h */,
+				DB0D2AE8180F930600D2CC57 /* SimpleTrackPoint.m */,
+				DB0D2AEA180F932400D2CC57 /* StopTrackPoint.h */,
+				DB0D2AEB180F932400D2CC57 /* StopTrackPoint.m */,
+			);
+			path = TrackPoint;
+			sourceTree = "<group>";
+		};
 		DB1017151801D5A20012D6CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DB1017191801D66B0012D6CF /* PointTrack */,
+				DB0D2AE6180F92EF00D2CC57 /* TrackPoint */,
 				DB10171A1801D66B0012D6CF /* Route */,
 				DB10171B1801D66B0012D6CF /* Track */,
 				DB10171C1801D66B0012D6CF /* TransportUnit */,
@@ -280,17 +294,6 @@
 				DB1017171801D5B80012D6CF /* DataObject.m */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		DB1017191801D66B0012D6CF /* PointTrack */ = {
-			isa = PBXGroup;
-			children = (
-				DB10171D1801D6810012D6CF /* SimplePointTrack.h */,
-				DB10171E1801D6810012D6CF /* SimplePointTrack.m */,
-				DB1017201801D6B10012D6CF /* StopPointTrack.h */,
-				DB1017211801D6B10012D6CF /* StopPointTrack.m */,
-			);
-			path = PointTrack;
 			sourceTree = "<group>";
 		};
 		DB10171A1801D66B0012D6CF /* Route */ = {
@@ -420,6 +423,7 @@
 		DBFADC9317FDCC97005EBE0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB0D2AE4180F8A7000D2CC57 /* CoreLocation.framework */,
 				DB0BE647180E711A002D1020 /* MapKit.framework */,
 				DBFADCD817FDD029005EBE0E /* QuartzCore.framework */,
 				DBFADC9417FDCC97005EBE0E /* UIKit.framework */,
@@ -616,12 +620,11 @@
 				DB078396180BD7D700582EF3 /* SettingsTableViewController.m in Sources */,
 				DBFADCCC17FDCD30005EBE0E /* UIView+Creation.m in Sources */,
 				DBFADCCD17FDCD30005EBE0E /* UIView+Frame.m in Sources */,
+				DB0D2AE9180F930600D2CC57 /* SimpleTrackPoint.m in Sources */,
 				DBFADCD217FDCEA0005EBE0E /* Constants.m in Sources */,
 				DB76832917FDE2F100305BFD /* ServiceProvider.m in Sources */,
 				DB1017181801D5B80012D6CF /* DataObject.m in Sources */,
-				DB10171F1801D6810012D6CF /* SimplePointTrack.m in Sources */,
 				DBC1DD74180BC39B00E00B27 /* NGTSidePanelController.m in Sources */,
-				DB1017221801D6B10012D6CF /* StopPointTrack.m in Sources */,
 				DB07838A180BD5B100582EF3 /* FavouritesTableViewController.m in Sources */,
 				DB6F2BCA180E33EA008B70FB /* RouteDetailViewController.m in Sources */,
 				DB078385180BCE8200582EF3 /* AboutViewController.m in Sources */,
@@ -633,6 +636,7 @@
 				DB07833A180BCA7B00582EF3 /* MenuTableViewController.m in Sources */,
 				DB07838E180BD6BF00582EF3 /* TrackSearchViewController.m in Sources */,
 				DB078392180BD73E00582EF3 /* MapViewController.m in Sources */,
+				DB0D2AEC180F932400D2CC57 /* StopTrackPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

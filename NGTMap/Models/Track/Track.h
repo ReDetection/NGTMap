@@ -13,6 +13,7 @@
 @interface Track : DataObject
 
 @property (strong, nonatomic) NSString *routeIdentifier;
+@property (strong, nonatomic) NSString *routeTitle;
 @property (assign, nonatomic) NSInteger direction;
 @property (strong, nonatomic) NSArray *trackPoints;
 

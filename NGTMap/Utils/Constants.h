@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
+    OnlineTransportUnitWorkStatus = 0,
+    OfflineTransportUnitWorkStatus = 1
+} TransportUnitWorkStatus;
+
+typedef enum {
     BusRouteType = 1,
     TrolleyBusRouteType = 2,
     TramRouteType = 3,
@@ -35,5 +40,6 @@ extern NSString *const kCustomValueInPath;
 
 extern NSString *const kRoutesPath;
 extern NSString *const kTransportUnitsByIdsPath;
+extern NSString *const kTracksByIdsPath;
 
 @end

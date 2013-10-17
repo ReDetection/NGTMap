@@ -7,8 +7,10 @@
 //
 
 #import "RouteDetailViewController.h"
+#import "Track.h"
 
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface RouteDetailViewController ()
 
@@ -22,6 +24,9 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (strong, nonatomic) NSDictionary *routeTypeImageNames;
+
+@property (strong, nonatomic) NSArray *transportUnits;
+@property (strong, nonatomic) Track *track;
 
 - (IBAction)addToFavouritesAction:(id)sender;
 - (IBAction)removeFromFavouritesAction:(id)sender;
@@ -40,10 +45,20 @@
     
     NSArray *routesArray = @[_route.identifier];
     [[ServiceProvider sharedProvider] getTransportUnitsByRoutes:routesArray successHandler:^(NSArray *transportUnits) {
-        NSLog(@"transportUnits - %@", transportUnits);
+        NSPredicate *filterOnlinePredictate = [NSPredicate predicateWithFormat:@"offlineStatus == %d", OnlineTransportUnitWorkStatus];
+        _transportUnits = [transportUnits filteredArrayUsingPredicate:filterOnlinePredictate];
+        _numberOfRoutesLabel.text = [NSString stringWithFormat:@"%d", _transportUnits.count];
     } failHandler:^(NSError *error) {
         
     }];
+    
+    [[ServiceProvider sharedProvider] getTracksByRoutes:routesArray successHandler:^(NSArray *tracks) {
+        _track = routesArray[0];
+    } failHandler:^(NSError *error) {
+        
+    }];
+    
+    [self.mapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(55.033333, 82.916667), MKCoordinateSpanMake(0.1, 0.1))];
 	
     [self updateData];
 }
