@@ -17,6 +17,9 @@ typedef void (^TracksByRouteAndDirectionsSuccessBlock)(NSArray *tracks);
 + (ServiceProvider *)sharedProvider;
 - (void)configureMappings;
 
+//Отменить запрос
+- (void)cancelRequestForPath: (NSString *)path;
+
 //Все маршруты
 - (void)getAllRoutesSuccessHandler: (AllRoutesSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
 

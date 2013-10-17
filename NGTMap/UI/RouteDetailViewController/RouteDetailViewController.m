@@ -55,7 +55,7 @@
     [[ServiceProvider sharedProvider] getTracksByRoutes:routesArray successHandler:^(NSArray *tracks) {
         _track = routesArray[0];
     } failHandler:^(NSError *error) {
-        
+
     }];
     
     [self.mapView setRegion:NOVOSIBIRSK_COORDINATES_REGION];
@@ -67,6 +67,13 @@
     [self.mapView addAnnotation:annot];
 	
     [self updateData];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    if ([self isMovingFromParentViewController]) {
+        [[ServiceProvider sharedProvider] cancelRequestForPath:kTransportUnitsByIdsPath];
+        [[ServiceProvider sharedProvider] cancelRequestForPath:kTracksByIdsPath];
+    }
 }
 
 - (void)updateData {

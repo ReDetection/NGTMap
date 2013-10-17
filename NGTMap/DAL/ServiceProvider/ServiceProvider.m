@@ -45,6 +45,10 @@ static ServiceProvider *instance = nil;
     return self;
 }
 
+- (void)cancelRequestForPath: (NSString *)path {
+    [[RKObjectManager sharedManager] cancelAllObjectRequestOperationsWithMethod:RKRequestMethodGET matchingPathPattern:path];
+}
+
 - (void)getAllRoutesSuccessHandler: (AllRoutesSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
     [[RKObjectManager sharedManager] getObjectsAtPath:kRoutesPath parameters:_baseRequestParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         NSArray *array = mappingResult.array;
