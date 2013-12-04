@@ -118,6 +118,7 @@ static ServiceProvider *instance = nil;
 - (void)configureMappings {
     NSURL *baseURL = [NSURL URLWithString:kServerAddress];
     AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    client.allowsInvalidSSLCertificate = YES;
     RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
     [RKObjectManager setSharedManager:objectManager];
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
