@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rNU-bX-GIR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bOL-sM-3t3">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -18,6 +18,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="uW5-ct-eUo" kind="custom" identifier="FromSidePanelToMenuEmptyIdentifier" customClass="NGTSidePanelControllerEmptySegue" id="43W-p9-iF0"/>
+                        <segue destination="iGk-1y-5i1" kind="custom" identifier="FromSidePanelToRoutesEmptyIdentifier" customClass="NGTSidePanelControllerEmptySegue" id="Ajq-9z-Z33"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDr-oF-eDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,36 +252,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30M-bH-8VP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1759" y="-1671"/>
-        </scene>
-        <!--Start Screen View Controller-->
-        <scene sceneID="ZcR-3p-bqE">
-            <objects>
-                <viewController id="rNU-bX-GIR" customClass="StartScreenViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tht-ag-7gt"/>
-                        <viewControllerLayoutGuide type="bottom" id="VcU-8h-Akk"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mS7-nQ-jpk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nia-ZH-Jzr">
-                                <rect key="frame" x="95" y="71" width="130" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <segue destination="bOL-sM-3t3" kind="modal" identifier="sidePanelControllerSequeIdentifier" modalTransitionStyle="crossDissolve" id="jGu-fa-mQT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JOe-BB-aby" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-387" y="54"/>
         </scene>
         <!--Favourites Table View Controller - Избранное-->
         <scene sceneID="079-p4-oSt">
@@ -548,4 +522,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="LB4-Cs-30A"/>
+    </inferredMetricsTieBreakers>
 </document>

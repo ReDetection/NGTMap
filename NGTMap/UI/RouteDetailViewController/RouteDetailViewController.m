@@ -8,6 +8,8 @@
 
 #import "RouteDetailViewController.h"
 #import "Track.h"
+#import "TracksManager.h"
+#import "TransportUnitsManager.h"
 
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
@@ -44,7 +46,8 @@
     self.routeTypeImageNames = @{[NSNumber numberWithInteger:BusRouteType]: @"routes_bus_icon.png", [NSNumber numberWithInteger:TrolleyBusRouteType]: @"routes_trolleybus_icon.png", [NSNumber numberWithInteger:TramRouteType]: @"routes_trambus_icon.png", [NSNumber numberWithInteger:MicroBusRouteType]: @"routes_microbus_icon.png"};
     
     NSArray *routesArray = @[_route.identifier];
-    [[ServiceProvider sharedProvider] getTransportUnitsByRoutes:routesArray successHandler:^(NSArray *transportUnits) {
+    
+    [[TransportUnitsManager sharedManager] getTransportUnitsByRoutes:routesArray successHandler:^(NSArray *transportUnits) {
         NSPredicate *filterOnlinePredictate = [NSPredicate predicateWithFormat:@"offlineStatus == %d", OnlineTransportUnitWorkStatus];
         _transportUnits = [transportUnits filteredArrayUsingPredicate:filterOnlinePredictate];
         _numberOfRoutesLabel.text = [NSString stringWithFormat:@"%d", _transportUnits.count];
@@ -52,14 +55,13 @@
         
     }];
     
-    [[ServiceProvider sharedProvider] getTracksByRoutes:routesArray successHandler:^(NSArray *tracks) {
+    [[TracksManager sharedManager] getTracksByRoutes:routesArray successHandler:^(NSArray *tracks) {
         _track = routesArray[0];
     } failHandler:^(NSError *error) {
-
+        
     }];
     
     [self.mapView setRegion:NOVOSIBIRSK_COORDINATES_REGION];
-    
     
     MKPointAnnotation *annot = [[MKPointAnnotation alloc] init];
     annot.title = @"Title";
@@ -71,8 +73,8 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     if ([self isMovingFromParentViewController]) {
-        [[ServiceProvider sharedProvider] cancelRequestForPath:kTransportUnitsByIdsPath];
-        [[ServiceProvider sharedProvider] cancelRequestForPath:kTracksByIdsPath];
+        [[TracksManager sharedManager] cancelGetTracks];
+        [[TransportUnitsManager sharedManager] cancelGetTransportUnits];
     }
 }
 
@@ -90,13 +92,13 @@
 #pragma mark - Actions
 
 - (IBAction)addToFavouritesAction:(id)sender {
-    [[DataManager sharedManager].favouritesStorage addRouteID:_route.identifier];
-    [self updateFavouiritesButtons];
+//    [[DataManager sharedManager].favouritesStorage addRouteID:_route.identifier];
+//    [self updateFavouiritesButtons];
 }
 
 - (IBAction)removeFromFavouritesAction:(id)sender {
-    [[DataManager sharedManager].favouritesStorage removeRouteID:_route.identifier];
-    [self updateFavouiritesButtons];
+//    [[DataManager sharedManager].favouritesStorage removeRouteID:_route.identifier];
+//    [self updateFavouiritesButtons];
 }
 
 - (IBAction)showMapAction:(id)sender {
@@ -106,13 +108,13 @@
 #pragma mark - Private methods
 
 - (void)updateFavouiritesButtons {
-    if ([[DataManager sharedManager].favouritesStorage isContainRouteID:_route.identifier]) {
-        self.addToFavouritesButton.hidden = YES;
-        self.removeFromFavouritesButton.hidden = NO;
-    } else {
-        self.addToFavouritesButton.hidden = NO;
-        self.removeFromFavouritesButton.hidden = YES;
-    }
+//    if ([[DataManager sharedManager].favouritesStorage isContainRouteID:_route.identifier]) {
+//        self.addToFavouritesButton.hidden = YES;
+//        self.removeFromFavouritesButton.hidden = NO;
+//    } else {
+//        self.addToFavouritesButton.hidden = NO;
+//        self.removeFromFavouritesButton.hidden = YES;
+//    }
 }
 
 @end

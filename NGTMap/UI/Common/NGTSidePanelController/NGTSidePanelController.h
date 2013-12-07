@@ -8,10 +8,13 @@
 
 #import "JASidePanelController.h"
 
-@interface NGTSidePanelControllerSegue : UIStoryboardSegue
+@interface NGTSidePanelControllerCenterSegue : UIStoryboardSegue
 
 @end
 
+@interface NGTSidePanelControllerEmptySegue : UIStoryboardSegue
+
+@end
 
 @interface NGTSidePanelController : JASidePanelController
 

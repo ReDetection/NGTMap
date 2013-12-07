@@ -10,6 +10,9 @@
 #import "RoutesTableViewCell.h"
 #import "RouteDetailViewController.h"
 #import "Route.h"
+#import "RoutesManager.h"
+
+#import <SVProgressHUD/SVProgressHUD.h>
 
 #define ROUTES_TABLEVIEW_CELL_IDENTIFIER @"RoutesCellIdentifier"
 
@@ -31,18 +34,17 @@
 {
     [super viewDidLoad];
     
-    self.routeTypeImageNames = @{[NSNumber numberWithInteger:BusRouteType]: @"routes_bus_icon.png", [NSNumber numberWithInteger:TrolleyBusRouteType]: @"routes_trolleybus_icon.png", [NSNumber numberWithInteger:TramRouteType]: @"routes_trambus_icon.png", [NSNumber numberWithInteger:MicroBusRouteType]: @"routes_microbus_icon.png"};
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    [SVProgressHUD showWithStatus:@"Загрузка..." maskType:SVProgressHUDMaskTypeGradient];
+    [[RoutesManager sharedManager] getAllRoutesSuccessHandler:^(NSArray *routes) {
+        [SVProgressHUD dismiss];
+        self.routes = routes;
+        [self.tableView reloadData];
+    } failHandler:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+    }];
     
-    [self updateData];
-}
-
-- (void)updateData {
-    self.routes = [DataManager sharedManager].routes;
-    [self.tableView reloadData];
+    //TODO вынести в отдельное место
+    self.routeTypeImageNames = @{[NSNumber numberWithInteger:BusRouteType]: @"routes_bus_icon.png", [NSNumber numberWithInteger:TrolleyBusRouteType]: @"routes_trolleybus_icon.png", [NSNumber numberWithInteger:TramRouteType]: @"routes_trambus_icon.png", [NSNumber numberWithInteger:MicroBusRouteType]: @"routes_microbus_icon.png"};
 }
 
 #pragma mark - Table view data source
@@ -73,36 +75,36 @@
 #pragma mark - Cell Actions
 
 - (IBAction)addToFavouriteAction:(id)sender {
-    NSInteger tag = ((UIButton *)sender).tag;
-    
-    Route *route = _routes[tag];
-    [[DataManager sharedManager].favouritesStorage addRouteID:route.identifier];
-    
-    RoutesTableViewCell *cell = (RoutesTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:tag inSection:0]];
-    [self updateFavouiritesButtonsForCell:cell withRoute:route];
+//    NSInteger tag = ((UIButton *)sender).tag;
+//    
+//    Route *route = _routes[tag];
+//    [[DataManager sharedManager].favouritesStorage addRouteID:route.identifier];
+//    
+//    RoutesTableViewCell *cell = (RoutesTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:tag inSection:0]];
+//    [self updateFavouiritesButtonsForCell:cell withRoute:route];
 }
 
 - (IBAction)removeFromFavouritesAction:(id)sender {
-    NSInteger tag = ((UIButton *)sender).tag;
-    
-    Route *route = _routes[tag];
-    [[DataManager sharedManager].favouritesStorage removeRouteID:route.identifier];
-    
-    RoutesTableViewCell *cell = (RoutesTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:tag inSection:0]];
-    [self updateFavouiritesButtonsForCell:cell withRoute:route];
+//    NSInteger tag = ((UIButton *)sender).tag;
+//    
+//    Route *route = _routes[tag];
+//    [[DataManager sharedManager].favouritesStorage removeRouteID:route.identifier];
+//    
+//    RoutesTableViewCell *cell = (RoutesTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:tag inSection:0]];
+//    [self updateFavouiritesButtonsForCell:cell withRoute:route];
 }
 
 
 #pragma mark - Private methods
 
 - (void)updateFavouiritesButtonsForCell: (RoutesTableViewCell *)cell withRoute: (Route *)route{
-    if ([[DataManager sharedManager].favouritesStorage isContainRouteID:route.identifier]) {
-        cell.addToFavouritesButton.hidden = YES;
-        cell.removeFromFavouritesButton.hidden = NO;
-    } else {
-        cell.addToFavouritesButton.hidden = NO;
-        cell.removeFromFavouritesButton.hidden = YES;
-    }
+//    if ([[DataManager sharedManager].favouritesStorage isContainRouteID:route.identifier]) {
+//        cell.addToFavouritesButton.hidden = YES;
+//        cell.removeFromFavouritesButton.hidden = NO;
+//    } else {
+//        cell.addToFavouritesButton.hidden = NO;
+//        cell.removeFromFavouritesButton.hidden = YES;
+//    }
 }
 
 

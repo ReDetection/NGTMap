@@ -1,9 +1,9 @@
 //
 //  Constants.h
-//  CouchCall
+//  NGTMap
 //
-//  Created by Mac Developer on 15.08.13.
-//  Copyright (c) 2013 Magora-Systems. All rights reserved.
+//  Created by Bromot Alexey on 14.10.13.
+//  Copyright (c) 2013 Alexey Bromot. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

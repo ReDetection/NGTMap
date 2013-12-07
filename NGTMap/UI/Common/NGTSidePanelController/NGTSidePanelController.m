@@ -10,12 +10,16 @@
 
 #import <UIViewController+JASidePanel.h>
 
-@implementation NGTSidePanelControllerSegue
+@implementation NGTSidePanelControllerCenterSegue
 
 - (void)perform {
     UIViewController *sourceController = self.sourceViewController;
     sourceController.sidePanelController.centerPanel = self.destinationViewController;
 }
+
+@end
+
+@implementation NGTSidePanelControllerEmptySegue
 
 @end
 
