@@ -11,6 +11,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Pods-Google-Maps-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 		<key>Pods-ISO8601DateFormatterValueTransformer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -75,7 +80,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>05B86DF89C734D75A3E5F6F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>05F9E8DA0B394C0DA94306C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0F988EC0857945D89B1F5EA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -86,6 +101,11 @@
 			<true/>
 		</dict>
 		<key>17E22B5EE4E04C5CB18A6412</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1CD46F29855145F695F2AE74</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -115,6 +135,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>81E9FF471AE8401AB9F58A24</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>89C51E906CEB4C2C8390675A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8C81D62E904E4D8E8763E755</key>
 		<dict>
 			<key>primary</key>
@@ -130,12 +160,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9FFB4EC77D31437C883ED6AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A046FE352D9C45278C4B5011</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A1C86046D35548EBA9D6E858</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD9F0BB9292B4DD595BE6817</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0BFF80BB6A64E3ABFBFF474</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -155,7 +200,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>EF47C759C5734A8DB2925CBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F2B476D3E4354F2884EFFE0F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB1D96A5DC044B6A903408FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking 3
 #define COCOAPODS_VERSION_PATCH_AFNetworking 3
 
+// Google-Maps-iOS-SDK
+#define COCOAPODS_POD_AVAILABLE_Google_Maps_iOS_SDK
+#define COCOAPODS_VERSION_MAJOR_Google_Maps_iOS_SDK 1
+#define COCOAPODS_VERSION_MINOR_Google_Maps_iOS_SDK 6
+#define COCOAPODS_VERSION_PATCH_Google_Maps_iOS_SDK 1
+
 // ISO8601DateFormatterValueTransformer
 #define COCOAPODS_POD_AVAILABLE_ISO8601DateFormatterValueTransformer
 #define COCOAPODS_VERSION_MAJOR_ISO8601DateFormatterValueTransformer 0
@@ -33,37 +39,37 @@
 // RestKit
 #define COCOAPODS_POD_AVAILABLE_RestKit
 #define COCOAPODS_VERSION_MAJOR_RestKit 0
-#define COCOAPODS_VERSION_MINOR_RestKit 21
+#define COCOAPODS_VERSION_MINOR_RestKit 22
 #define COCOAPODS_VERSION_PATCH_RestKit 0
 
 // RestKit/Core
 #define COCOAPODS_POD_AVAILABLE_RestKit_Core
 #define COCOAPODS_VERSION_MAJOR_RestKit_Core 0
-#define COCOAPODS_VERSION_MINOR_RestKit_Core 21
+#define COCOAPODS_VERSION_MINOR_RestKit_Core 22
 #define COCOAPODS_VERSION_PATCH_RestKit_Core 0
 
 // RestKit/CoreData
 #define COCOAPODS_POD_AVAILABLE_RestKit_CoreData
 #define COCOAPODS_VERSION_MAJOR_RestKit_CoreData 0
-#define COCOAPODS_VERSION_MINOR_RestKit_CoreData 21
+#define COCOAPODS_VERSION_MINOR_RestKit_CoreData 22
 #define COCOAPODS_VERSION_PATCH_RestKit_CoreData 0
 
 // RestKit/Network
 #define COCOAPODS_POD_AVAILABLE_RestKit_Network
 #define COCOAPODS_VERSION_MAJOR_RestKit_Network 0
-#define COCOAPODS_VERSION_MINOR_RestKit_Network 21
+#define COCOAPODS_VERSION_MINOR_RestKit_Network 22
 #define COCOAPODS_VERSION_PATCH_RestKit_Network 0
 
 // RestKit/ObjectMapping
 #define COCOAPODS_POD_AVAILABLE_RestKit_ObjectMapping
 #define COCOAPODS_VERSION_MAJOR_RestKit_ObjectMapping 0
-#define COCOAPODS_VERSION_MINOR_RestKit_ObjectMapping 21
+#define COCOAPODS_VERSION_MINOR_RestKit_ObjectMapping 22
 #define COCOAPODS_VERSION_PATCH_RestKit_ObjectMapping 0
 
 // RestKit/Support
 #define COCOAPODS_POD_AVAILABLE_RestKit_Support
 #define COCOAPODS_VERSION_MAJOR_RestKit_Support 0
-#define COCOAPODS_VERSION_MINOR_RestKit_Support 21
+#define COCOAPODS_VERSION_MINOR_RestKit_Support 22
 #define COCOAPODS_VERSION_PATCH_RestKit_Support 0
 
 // SOCKit
@@ -80,7 +86,7 @@
 
 // TransitionKit
 #define COCOAPODS_POD_AVAILABLE_TransitionKit
-#define COCOAPODS_VERSION_MAJOR_TransitionKit 1
-#define COCOAPODS_VERSION_MINOR_TransitionKit 1
-#define COCOAPODS_VERSION_PATCH_TransitionKit 1
+#define COCOAPODS_VERSION_MAJOR_TransitionKit 2
+#define COCOAPODS_VERSION_MINOR_TransitionKit 0
+#define COCOAPODS_VERSION_PATCH_TransitionKit 0
 

@@ -8,6 +8,8 @@
 
 #import "DataObject.h"
 
+//Группа маршрутов (под соответствующее окно приложения)
+
 @interface GroupRoutes : DataObject
 
 @property (strong, nonatomic) NSString *name;
