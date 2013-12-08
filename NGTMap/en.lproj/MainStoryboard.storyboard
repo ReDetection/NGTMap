@@ -59,7 +59,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="iGk-1y-5i1" kind="custom" customClass="NGTSidePanelControllerSegue" id="LB4-Cs-30A"/>
+                                            <segue destination="iGk-1y-5i1" kind="custom" customClass="NGTSidePanelControllerCenterSegue" id="LB4-Cs-30A"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3Ew-K5-gSX">
@@ -83,7 +83,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Ra0-9p-8bY" kind="custom" customClass="NGTSidePanelControllerSegue" id="yKG-Jz-Olu"/>
+                                            <segue destination="Ra0-9p-8bY" kind="custom" customClass="NGTSidePanelControllerCenterSegue" id="yKG-Jz-Olu"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pHd-NL-PpR">
@@ -107,7 +107,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Dyz-Ks-f2Y" kind="custom" customClass="NGTSidePanelControllerSegue" id="PZD-76-9TZ"/>
+                                            <segue destination="Dyz-Ks-f2Y" kind="custom" customClass="NGTSidePanelControllerCenterSegue" id="PZD-76-9TZ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="V5O-b6-uE8">
@@ -131,7 +131,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="KnO-gc-nOE" kind="custom" customClass="NGTSidePanelControllerSegue" id="kd6-Su-f8N"/>
+                                            <segue destination="KnO-gc-nOE" kind="custom" customClass="NGTSidePanelControllerCenterSegue" id="kd6-Su-f8N"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uWA-Lm-tM2">
@@ -155,7 +155,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="POd-D0-mON" kind="custom" customClass="NGTSidePanelControllerSegue" id="2sb-5e-Egj"/>
+                                            <segue destination="POd-D0-mON" kind="custom" customClass="NGTSidePanelControllerCenterSegue" id="2sb-5e-Egj"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -180,74 +180,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RoutesCellIdentifier" rowHeight="60" id="zut-Nk-R0C" customClass="RoutesTableViewCell">
-                                <rect key="frame" x="0.0" y="66" width="320" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zut-Nk-R0C" id="ogf-Cc-DSm">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="59"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Fy-o3-J9K">
-                                            <rect key="frame" x="20" y="10" width="42" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="97 (1197)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0G-BE-P7E">
-                                            <rect key="frame" x="74" y="3" width="185" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Родники" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHf-In-Vai">
-                                            <rect key="frame" x="74" y="24" width="185" height="15"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Плющихинский" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzL-Up-VOL">
-                                            <rect key="frame" x="74" y="39" width="185" height="15"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZC-Bk-fTy">
-                                            <rect key="frame" x="216" y="15" width="84" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Добавить">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="addToFavouriteAction:" destination="B0w-Cg-l1q" eventType="touchUpInside" id="Or5-OQ-G0c"/>
-                                            </connections>
-                                        </button>
-                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwt-R7-BII">
-                                            <rect key="frame" x="232" y="15" width="68" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Удалить">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="removeFromFavouritesAction:" destination="B0w-Cg-l1q" eventType="touchUpInside" id="O7z-Eo-IbL"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="addToFavouritesButton" destination="8ZC-Bk-fTy" id="Vpq-Iy-ztQ"/>
-                                    <outlet property="removeFromFavouritesButton" destination="Gwt-R7-BII" id="yyj-JS-EH9"/>
-                                    <outlet property="routeStopBeginLabel" destination="mHf-In-Vai" id="Hax-IR-3G2"/>
-                                    <outlet property="routeStopEndLabel" destination="UzL-Up-VOL" id="LAT-4p-xHz"/>
-                                    <outlet property="routeTitleLabel" destination="t0G-BE-P7E" id="pZy-xg-etl"/>
-                                    <outlet property="routeTypeImageView" destination="2Fy-o3-J9K" id="JiR-wL-x8o"/>
-                                    <segue destination="czm-u1-mnZ" kind="push" identifier="showRouteDetailIdentifier" id="YwW-AL-NlE"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Маршруты" id="WQv-2u-9yL"/>
+                    <connections>
+                        <segue destination="czm-u1-mnZ" kind="push" identifier="showRouteDetailIdentifier" id="sHd-Tv-Cfn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30M-bH-8VP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,22 +194,15 @@
         <scene sceneID="079-p4-oSt">
             <objects>
                 <tableViewController id="iRX-HA-IMt" customClass="FavouritesTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RK9-kw-kCm">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="RK9-kw-kCm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TZ9-e0-VhO">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TZ9-e0-VhO" id="jGv-wt-Ibf">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Избранное" id="rNi-17-RtP"/>
+                    <connections>
+                        <segue destination="czm-u1-mnZ" kind="push" identifier="showRouteDetailIdentifier" id="I2f-ub-cTf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKR-SA-bIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -313,24 +243,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz3-mL-70p">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz3-mL-70p">
                                 <rect key="frame" x="29" y="185" width="128" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="В избранное">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addToFavouritesAction:" destination="czm-u1-mnZ" eventType="touchUpInside" id="oBh-7f-kTt"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJb-f7-vBV">
-                                <rect key="frame" x="29" y="185" width="128" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Разлюбить">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="removeFromFavouritesAction:" destination="czm-u1-mnZ" eventType="touchUpInside" id="bgL-f8-Pw9"/>
+                                    <action selector="favouriteAction:" destination="czm-u1-mnZ" eventType="touchUpInside" id="x6i-8y-af8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dd-VL-Nuy">
@@ -364,10 +284,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="pXG-GQ-Ayy"/>
                     <connections>
-                        <outlet property="addToFavouritesButton" destination="Wz3-mL-70p" id="tjo-bK-bRN"/>
+                        <outlet property="favoriteButton" destination="Wz3-mL-70p" id="DEd-LC-AGK"/>
                         <outlet property="mapView" destination="tN8-X7-uZj" id="PhX-qD-Cdp"/>
                         <outlet property="numberOfRoutesLabel" destination="muZ-Za-m8b" id="576-er-68a"/>
-                        <outlet property="removeFromFavouritesButton" destination="KJb-f7-vBV" id="dfP-LP-pAv"/>
                         <outlet property="routeStopBeginLabel" destination="8z1-Ll-MC6" id="G96-32-BaA"/>
                         <outlet property="routeStopEndLabel" destination="vmg-91-lUK" id="FR2-Sp-eqd"/>
                         <outlet property="routeTitleLabel" destination="3I9-Pl-KQk" id="A6d-Tx-Upo"/>
@@ -435,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUm-ME-4hB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1775" y="1782"/>
+            <point key="canvasLocation" x="1759" y="1790"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mXV-7Y-pXv">
@@ -524,5 +443,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="LB4-Cs-30A"/>
+        <segue reference="I2f-ub-cTf"/>
     </inferredMetricsTieBreakers>
 </document>

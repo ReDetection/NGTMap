@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RoutesTableViewController : UITableViewController
+#import "RoutesTableViewCell.h"
+#import "RouteDetailViewController.h"
+#import "Route.h"
+#import "RoutesManager.h"
+#import "FavoritesManager.h"
+#import "UITableViewCellAdditions.h"
+
+@interface RoutesTableViewController : UITableViewController <RoutesTableViewCellDelegate>
+
+@property (strong, nonatomic) NSDictionary *routeTypeImageNames;
+@property (strong, nonatomic) NSArray *routes;
+
+- (void)routesTableViewCellFavouriteAction: (RoutesTableViewCell *)cell;
+- (void)updateData;
 
 @end

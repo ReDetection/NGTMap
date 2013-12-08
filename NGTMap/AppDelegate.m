@@ -7,14 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import "FavoritesManager.h"
 #import <RestKit/RestKit.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupRestKit];
-    
+        
     return YES;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [[FavoritesManager sharedManager] load];
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    [[FavoritesManager sharedManager] save];
 }
 							
 - (void)setupRestKit {

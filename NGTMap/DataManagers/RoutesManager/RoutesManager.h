@@ -7,11 +7,14 @@
 //
 
 #import "BaseDataManager.h"
+#import "Route.h"
 
 typedef void (^AllRoutesSuccessBlock)(NSArray *routes);
 
 @interface RoutesManager : BaseDataManager
 
-- (void)getAllRoutesSuccessHandler: (AllRoutesSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
+- (NSArray *)getAllRoutesSuccessHandler: (AllRoutesSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
+
+- (Route *)routeWithID: (NSString *)identifier;
 
 @end

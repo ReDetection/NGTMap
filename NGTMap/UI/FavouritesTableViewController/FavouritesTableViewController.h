@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Alexey Bromot. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "RoutesTableViewController.h"
 
-@interface FavouritesTableViewController : UITableViewController
+@interface FavouritesTableViewController : RoutesTableViewController
 
 @end

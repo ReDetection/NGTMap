@@ -23,6 +23,8 @@
 - (void)addGroupRoutes: (GroupRoutes *)group;
 - (void)removeGroupRoutes: (GroupRoutes *)group;
 
+- (BOOL)isFavoriteRoute: (Route *)route;
+
 - (NSArray *)routes;
 - (NSArray *)groupsRoutes;
 

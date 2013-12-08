@@ -25,8 +25,6 @@
 		DB1017281801D7620012D6CF /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017271801D7620012D6CF /* Track.m */; };
 		DB10172B1801D78C0012D6CF /* TransportUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10172A1801D78C0012D6CF /* TransportUnit.m */; };
 		DB6F2BCA180E33EA008B70FB /* RouteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6F2BC9180E33EA008B70FB /* RouteDetailViewController.m */; };
-		DB96D89D1853122700CFC6DF /* FavouritesStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = DB96D8961853122700CFC6DF /* FavouritesStorage.m */; };
-		DB96D89E1853122700CFC6DF /* MapStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = DB96D8991853122700CFC6DF /* MapStorage.m */; };
 		DB96D8A01853125000CFC6DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB96D89F1853125000CFC6DF /* Images.xcassets */; };
 		DB96D8A31853160800CFC6DF /* BaseDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB96D8A21853160800CFC6DF /* BaseDataManager.m */; };
 		DB96D8A71853290A00CFC6DF /* RoutesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB96D8A61853290A00CFC6DF /* RoutesManager.m */; };
@@ -35,6 +33,7 @@
 		DBC1DD74180BC39B00E00B27 /* NGTSidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC1DD73180BC39B00E00B27 /* NGTSidePanelController.m */; };
 		DBF8194F185340F30096D2B7 /* FavoritesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF8194E185340F30096D2B7 /* FavoritesManager.m */; };
 		DBF81953185344550096D2B7 /* GroupRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF81952185344550096D2B7 /* GroupRoutes.m */; };
+		DBF819551854C03C0096D2B7 /* RoutesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF819541854C03C0096D2B7 /* RoutesTableViewCell.xib */; };
 		DBFADC9517FDCC97005EBE0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9417FDCC97005EBE0E /* UIKit.framework */; };
 		DBFADC9717FDCC97005EBE0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9617FDCC97005EBE0E /* Foundation.framework */; };
 		DBFADC9917FDCC97005EBE0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADC9817FDCC97005EBE0E /* CoreGraphics.framework */; };
@@ -87,10 +86,6 @@
 		DB6F2BBC180D2496008B70FB /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		DB6F2BC8180E33EA008B70FB /* RouteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteDetailViewController.h; sourceTree = "<group>"; };
 		DB6F2BC9180E33EA008B70FB /* RouteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailViewController.m; sourceTree = "<group>"; };
-		DB96D8951853122700CFC6DF /* FavouritesStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritesStorage.h; sourceTree = "<group>"; };
-		DB96D8961853122700CFC6DF /* FavouritesStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesStorage.m; sourceTree = "<group>"; };
-		DB96D8981853122700CFC6DF /* MapStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapStorage.h; sourceTree = "<group>"; };
-		DB96D8991853122700CFC6DF /* MapStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapStorage.m; sourceTree = "<group>"; };
 		DB96D89F1853125000CFC6DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DB96D8A11853160800CFC6DF /* BaseDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDataManager.h; sourceTree = "<group>"; };
 		DB96D8A21853160800CFC6DF /* BaseDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDataManager.m; sourceTree = "<group>"; };
@@ -106,6 +101,7 @@
 		DBF8194E185340F30096D2B7 /* FavoritesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesManager.m; sourceTree = "<group>"; };
 		DBF81951185344550096D2B7 /* GroupRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupRoutes.h; sourceTree = "<group>"; };
 		DBF81952185344550096D2B7 /* GroupRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupRoutes.m; sourceTree = "<group>"; };
+		DBF819541854C03C0096D2B7 /* RoutesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutesTableViewCell.xib; sourceTree = "<group>"; };
 		DBFADC9117FDCC97005EBE0E /* NGTMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NGTMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFADC9417FDCC97005EBE0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DBFADC9617FDCC97005EBE0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -219,6 +215,7 @@
 			children = (
 				DB0783AB180C03B400582EF3 /* RoutesTableViewCell.h */,
 				DB0783AC180C03B400582EF3 /* RoutesTableViewCell.m */,
+				DBF819541854C03C0096D2B7 /* RoutesTableViewCell.xib */,
 			);
 			path = RoutesTableViewCell;
 			sourceTree = "<group>";
@@ -291,38 +288,10 @@
 				DB96D8AC18532F9A00CFC6DF /* TransportUnitsManager */,
 				DB96D8A818532CCC00CFC6DF /* TracksManager */,
 				DB96D8A4185317B800CFC6DF /* RoutesManager */,
-				DB96D8931853122700CFC6DF /* Storages */,
 				DB96D8A11853160800CFC6DF /* BaseDataManager.h */,
 				DB96D8A21853160800CFC6DF /* BaseDataManager.m */,
 			);
 			path = DataManagers;
-			sourceTree = "<group>";
-		};
-		DB96D8931853122700CFC6DF /* Storages */ = {
-			isa = PBXGroup;
-			children = (
-				DB96D8941853122700CFC6DF /* FavouritesStorage */,
-				DB96D8971853122700CFC6DF /* MapStorage */,
-			);
-			path = Storages;
-			sourceTree = "<group>";
-		};
-		DB96D8941853122700CFC6DF /* FavouritesStorage */ = {
-			isa = PBXGroup;
-			children = (
-				DB96D8951853122700CFC6DF /* FavouritesStorage.h */,
-				DB96D8961853122700CFC6DF /* FavouritesStorage.m */,
-			);
-			path = FavouritesStorage;
-			sourceTree = "<group>";
-		};
-		DB96D8971853122700CFC6DF /* MapStorage */ = {
-			isa = PBXGroup;
-			children = (
-				DB96D8981853122700CFC6DF /* MapStorage.h */,
-				DB96D8991853122700CFC6DF /* MapStorage.m */,
-			);
-			path = MapStorage;
 			sourceTree = "<group>";
 		};
 		DB96D8A4185317B800CFC6DF /* RoutesManager */ = {
@@ -544,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBFADC9F17FDCC97005EBE0E /* InfoPlist.strings in Resources */,
+				DBF819551854C03C0096D2B7 /* RoutesTableViewCell.xib in Resources */,
 				DB96D8A01853125000CFC6DF /* Images.xcassets in Resources */,
 				DBFADCAE17FDCC97005EBE0E /* MainStoryboard.storyboard in Resources */,
 			);
@@ -590,10 +560,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBFADCA117FDCC97005EBE0E /* main.m in Sources */,
-				DB96D89E1853122700CFC6DF /* MapStorage.m in Sources */,
 				DBFADCA517FDCC97005EBE0E /* AppDelegate.m in Sources */,
 				DB0783AD180C03B400582EF3 /* RoutesTableViewCell.m in Sources */,
-				DB96D89D1853122700CFC6DF /* FavouritesStorage.m in Sources */,
 				DBFADCC917FDCD30005EBE0E /* NSObject-ClassName.m in Sources */,
 				DBF8194F185340F30096D2B7 /* FavoritesManager.m in Sources */,
 				DBFADCCA17FDCD30005EBE0E /* UITableViewCellAdditions.m in Sources */,

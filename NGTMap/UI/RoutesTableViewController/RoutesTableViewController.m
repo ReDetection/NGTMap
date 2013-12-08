@@ -7,24 +7,12 @@
 //
 
 #import "RoutesTableViewController.h"
-#import "RoutesTableViewCell.h"
-#import "RouteDetailViewController.h"
-#import "Route.h"
-#import "RoutesManager.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
 
-#define ROUTES_TABLEVIEW_CELL_IDENTIFIER @"RoutesCellIdentifier"
-
-#define ROUTE_DETAIL_SEQUE_IDENTIFIER @"showRouteDetailIdentifier"
+NSString *const kRouteDetailViewControllerIdentifier = @"showRouteDetailIdentifier";
 
 @interface RoutesTableViewController ()
-
-@property (strong, nonatomic) NSDictionary *routeTypeImageNames;
-@property (strong, nonatomic) NSArray *routes;
-
-- (IBAction)addToFavouriteAction:(id)sender;
-- (IBAction)removeFromFavouritesAction:(id)sender;
 
 @end
 
@@ -34,8 +22,21 @@
 {
     [super viewDidLoad];
     
-    [SVProgressHUD showWithStatus:@"Загрузка..." maskType:SVProgressHUDMaskTypeGradient];
-    [[RoutesManager sharedManager] getAllRoutesSuccessHandler:^(NSArray *routes) {
+    self.clearsSelectionOnViewWillAppear = YES;
+    
+    //TODO вынести в отдельное место
+    self.routeTypeImageNames = @{[NSNumber numberWithInteger:BusRouteType]: @"routes_bus_icon.png", [NSNumber numberWithInteger:TrolleyBusRouteType]: @"routes_trolleybus_icon.png", [NSNumber numberWithInteger:TramRouteType]: @"routes_trambus_icon.png", [NSNumber numberWithInteger:MicroBusRouteType]: @"routes_microbus_icon.png"};
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self updateData];
+    
+}
+
+- (void)updateData {
+    self.routes = [[RoutesManager sharedManager] getAllRoutesSuccessHandler:^(NSArray *routes) {
         [SVProgressHUD dismiss];
         self.routes = routes;
         [self.tableView reloadData];
@@ -43,8 +44,20 @@
         [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
     }];
     
-    //TODO вынести в отдельное место
-    self.routeTypeImageNames = @{[NSNumber numberWithInteger:BusRouteType]: @"routes_bus_icon.png", [NSNumber numberWithInteger:TrolleyBusRouteType]: @"routes_trolleybus_icon.png", [NSNumber numberWithInteger:TramRouteType]: @"routes_trambus_icon.png", [NSNumber numberWithInteger:MicroBusRouteType]: @"routes_microbus_icon.png"};
+    if (_routes) {
+        [self.tableView reloadData];
+    } else {
+        [SVProgressHUD showWithStatus:@"Загрузка..." maskType:SVProgressHUDMaskTypeGradient];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:kRouteDetailViewControllerIdentifier]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        RouteDetailViewController *routeDetailVC =  [segue destinationViewController];
+        routeDetailVC.route = _routes[indexPath.row];
+    }
+    
 }
 
 #pragma mark - Table view data source
@@ -55,10 +68,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    RoutesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ROUTES_TABLEVIEW_CELL_IDENTIFIER forIndexPath:indexPath];
-    cell.addToFavouritesButton.tag = indexPath.row;
-    cell.removeFromFavouritesButton.tag = indexPath.row;
-    
+    RoutesTableViewCell *cell = [RoutesTableViewCell createTableViewCellForTable:tableView];
+    cell.delegate = self;
     Route *route = _routes[indexPath.row];
     cell.routeTitleLabel.text = [NSString stringWithFormat:@"%@ (%@)",route.title, route.oldTitle];
     cell.routeStopBeginLabel.text = route.stopBegin;
@@ -72,54 +83,32 @@
     return cell;
 }
 
-#pragma mark - Cell Actions
-
-- (IBAction)addToFavouriteAction:(id)sender {
-//    NSInteger tag = ((UIButton *)sender).tag;
-//    
-//    Route *route = _routes[tag];
-//    [[DataManager sharedManager].favouritesStorage addRouteID:route.identifier];
-//    
-//    RoutesTableViewCell *cell = (RoutesTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:tag inSection:0]];
-//    [self updateFavouiritesButtonsForCell:cell withRoute:route];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:kRouteDetailViewControllerIdentifier sender:nil];
 }
 
-- (IBAction)removeFromFavouritesAction:(id)sender {
-//    NSInteger tag = ((UIButton *)sender).tag;
-//    
-//    Route *route = _routes[tag];
-//    [[DataManager sharedManager].favouritesStorage removeRouteID:route.identifier];
-//    
-//    RoutesTableViewCell *cell = (RoutesTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:tag inSection:0]];
-//    [self updateFavouiritesButtonsForCell:cell withRoute:route];
-}
+#pragma mark - RoutesTableViewCellDelegate
 
+- (void)routesTableViewCellFavouriteAction:(RoutesTableViewCell *)cell {
+    
+    NSInteger index = [self.tableView indexPathForCell:cell].row;
+    
+    Route *route = _routes[index];
+    if ([[FavoritesManager sharedManager] isFavoriteRoute:route]) {
+        [[FavoritesManager sharedManager] removeRoute:route];
+    } else {
+        [[FavoritesManager sharedManager] addRoute:route];
+    }
+
+    [self updateFavouiritesButtonsForCell:cell withRoute:route];
+}
 
 #pragma mark - Private methods
 
 - (void)updateFavouiritesButtonsForCell: (RoutesTableViewCell *)cell withRoute: (Route *)route{
-//    if ([[DataManager sharedManager].favouritesStorage isContainRouteID:route.identifier]) {
-//        cell.addToFavouritesButton.hidden = YES;
-//        cell.removeFromFavouritesButton.hidden = NO;
-//    } else {
-//        cell.addToFavouritesButton.hidden = NO;
-//        cell.removeFromFavouritesButton.hidden = YES;
-//    }
+    NSString *favoriteButtonTitle = [[FavoritesManager sharedManager] isFavoriteRoute:route] ? @"Удалить" : @"Добавить";
+    [cell.favoriteButton setTitle:favoriteButtonTitle forState:UIControlStateNormal];
 }
 
-
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:ROUTE_DETAIL_SEQUE_IDENTIFIER]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        RouteDetailViewController *routeDetailVC =  [segue destinationViewController];
-        routeDetailVC.route = _routes[indexPath.row];
-    }
-    
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
 
 @end

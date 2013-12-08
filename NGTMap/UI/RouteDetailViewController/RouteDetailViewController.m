@@ -10,6 +10,7 @@
 #import "Track.h"
 #import "TracksManager.h"
 #import "TransportUnitsManager.h"
+#import "FavoritesManager.h"
 
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
@@ -20,8 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *routeTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *routeStopBeginLabel;
 @property (weak, nonatomic) IBOutlet UILabel *routeStopEndLabel;
-@property (weak, nonatomic) IBOutlet UIButton *addToFavouritesButton;
-@property (weak, nonatomic) IBOutlet UIButton *removeFromFavouritesButton;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfRoutesLabel;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
@@ -30,8 +30,7 @@
 @property (strong, nonatomic) NSArray *transportUnits;
 @property (strong, nonatomic) Track *track;
 
-- (IBAction)addToFavouritesAction:(id)sender;
-- (IBAction)removeFromFavouritesAction:(id)sender;
+- (IBAction)favouriteAction:(id)sender;
 - (IBAction)showMapAction:(id)sender;
 
 
@@ -65,7 +64,7 @@
     
     MKPointAnnotation *annot = [[MKPointAnnotation alloc] init];
     annot.title = @"Title";
-    annot.coordinate = CLLocationCoordinate2DMake(55.033333, 82.916667);
+    annot.coordinate = CLLocationCoordinate2DMake(NOVOSIVIRSK_DEFAULT_LATITUDE, NOVOSIVIRSK_DEFAULT_LONGITUDE);
     [self.mapView addAnnotation:annot];
 	
     [self updateData];
@@ -86,19 +85,19 @@
     self.routeStopBeginLabel.text = _route.stopBegin;
     self.routeStopEndLabel.text = _route.stopEnd;
     
-    [self updateFavouiritesButtons];
+    [self updateFavouiritesButton];
 }
 
 #pragma mark - Actions
 
-- (IBAction)addToFavouritesAction:(id)sender {
-//    [[DataManager sharedManager].favouritesStorage addRouteID:_route.identifier];
-//    [self updateFavouiritesButtons];
-}
-
-- (IBAction)removeFromFavouritesAction:(id)sender {
-//    [[DataManager sharedManager].favouritesStorage removeRouteID:_route.identifier];
-//    [self updateFavouiritesButtons];
+- (IBAction)favouriteAction:(id)sender {
+    if ([[FavoritesManager sharedManager] isFavoriteRoute:_route]) {
+        [[FavoritesManager sharedManager] removeRoute:_route];
+    } else {
+        [[FavoritesManager sharedManager] addRoute:_route];
+    }
+    
+    [self updateFavouiritesButton];
 }
 
 - (IBAction)showMapAction:(id)sender {
@@ -107,14 +106,9 @@
 
 #pragma mark - Private methods
 
-- (void)updateFavouiritesButtons {
-//    if ([[DataManager sharedManager].favouritesStorage isContainRouteID:_route.identifier]) {
-//        self.addToFavouritesButton.hidden = YES;
-//        self.removeFromFavouritesButton.hidden = NO;
-//    } else {
-//        self.addToFavouritesButton.hidden = NO;
-//        self.removeFromFavouritesButton.hidden = YES;
-//    }
+- (void)updateFavouiritesButton {
+    NSString *favoriteButtonTitle = [[FavoritesManager sharedManager] isFavoriteRoute:_route] ? @"Удалить" : @"В избранное";
+    [_favoriteButton setTitle:favoriteButtonTitle forState:UIControlStateNormal];
 }
 
 @end
