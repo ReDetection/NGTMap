@@ -32,6 +32,7 @@
 
 -(void) awakeFromNib
 {
+    self.recognizesPanGesture = NO;
     [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"leftSideViewController"]];
     [self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"centerSideViewController"]];
 }

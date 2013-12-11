@@ -8,12 +8,14 @@
 
 #import "DataObject.h"
 
+#import <CoreLocation/CoreLocation.h>
+
 //Точка изгиба/поворота на трассе
 
 @interface SimpleTrackPoint : DataObject
 
 @property (assign, nonatomic) NSInteger order;
-@property (assign, nonatomic) CGFloat latitude;
-@property (assign, nonatomic) CGFloat longitude;
+@property (assign, nonatomic) CLLocationDegrees latitude;
+@property (assign, nonatomic) CLLocationDegrees longitude;
 
 @end

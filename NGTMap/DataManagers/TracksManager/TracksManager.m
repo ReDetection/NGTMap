@@ -66,7 +66,7 @@ static TracksManager *instance = nil;
     return self;
 }
 
-- (void)getTracksByRoutesAndDirections: (NSArray *)routesWithDirections successHandler: (TracksByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
+- (void)getTracksByRoutesIDsAndDirections: (NSArray *)routesWithDirections successHandler: (TracksByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
     NSString *routesWithDirectionsString = [self formattedStringFromArray:routesWithDirections];
     NSString *requestPath = [kTracksByIdsPath stringByReplacingOccurrencesOfString:kCustomValueInPath withString:routesWithDirectionsString];
     
@@ -80,7 +80,7 @@ static TracksManager *instance = nil;
     }];
 }
 
-- (void)getTracksByRoutes: (NSArray *)routes successHandler: (TracksByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
+- (void)getTracksByRoutesIDs: (NSArray *)routes successHandler: (TracksByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
     
     NSMutableArray *resultArrayWithDirections = [NSMutableArray array];
     [routes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -89,7 +89,7 @@ static TracksManager *instance = nil;
         [resultArrayWithDirections addObject:routesWithDirections];
     }];
     
-    [self getTracksByRoutesAndDirections:resultArrayWithDirections successHandler:successHandler failHandler:failHandler];
+    [self getTracksByRoutesIDsAndDirections:resultArrayWithDirections successHandler:successHandler failHandler:failHandler];
 }
 
 - (void)cancelGetTracks {

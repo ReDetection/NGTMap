@@ -166,7 +166,6 @@
                             <outlet property="delegate" destination="uW5-ct-eUo" id="Ku9-cq-o4f"/>
                         </connections>
                     </tableView>
-                    <nil key="simulatedStatusBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8I-a1-Xmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,7 +182,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Маршруты" id="WQv-2u-9yL"/>
                     <connections>
-                        <segue destination="czm-u1-mnZ" kind="push" identifier="showRouteDetailIdentifier" id="sHd-Tv-Cfn"/>
+                        <segue destination="flv-Sk-huz" kind="push" identifier="showMapViewControllerIdentifier" id="O8P-tQ-u9d"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30M-bH-8VP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -201,7 +200,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Избранное" id="rNi-17-RtP"/>
                     <connections>
-                        <segue destination="czm-u1-mnZ" kind="push" identifier="showRouteDetailIdentifier" id="I2f-ub-cTf"/>
+                        <segue destination="flv-Sk-huz" kind="push" identifier="showMapViewControllerIdentifier" id="I4I-l4-z9J"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKR-SA-bIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,9 +258,6 @@
                                 <state key="normal" title="На карту">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="showMapAction:" destination="czm-u1-mnZ" eventType="touchUpInside" id="PpU-5z-aoB"/>
-                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="На маршруте: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iah-Wx-qbl">
                                 <rect key="frame" x="29" y="234" width="98" height="17"/>
@@ -295,7 +291,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4TL-1Q-I1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2330" y="-1254"/>
+            <point key="canvasLocation" x="2826" y="-1790"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Z5B-2k-1dk">
+            <objects>
+                <viewController id="flv-Sk-huz" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M6q-zn-ZsJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="rS5-a9-yno"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nlf-gf-kfo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EmG-jq-JVT">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OlP-h5-l9j"/>
+                    <connections>
+                        <outlet property="mapContentView" destination="EmG-jq-JVT" id="2Cm-cY-qbH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IhK-WT-nyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2281" y="-1274"/>
         </scene>
         <!--Settings Table View Controller - Настройки-->
         <scene sceneID="aVi-rN-ehJ">
@@ -307,7 +332,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="7Fo-xq-thf">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Fo-xq-thf" id="kjh-bz-aEy">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -443,6 +468,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="LB4-Cs-30A"/>
-        <segue reference="I2f-ub-cTf"/>
+        <segue reference="I4I-l4-z9J"/>
     </inferredMetricsTieBreakers>
 </document>

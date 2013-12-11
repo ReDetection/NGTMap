@@ -12,8 +12,8 @@ typedef void (^TransportUnitsByRouteAndDirectionsSuccessBlock)(NSArray *transpor
 
 @interface TransportUnitsManager : BaseDataManager
 
-- (void)getTransportUnitsByRoutesAndDirections: (NSArray *)routesWithDirections successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
-- (void)getTransportUnitsByRoutes: (NSArray *)routes successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
+- (void)getTransportUnitsByRoutesIDsAndDirections: (NSArray *)routesWithDirections successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
+- (void)getTransportUnitsByRoutesIDs: (NSArray *)routes successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
 - (void)cancelGetTransportUnits;
 
 @end

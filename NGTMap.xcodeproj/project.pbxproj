@@ -24,6 +24,7 @@
 		DB1017251801D6D30012D6CF /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017241801D6D30012D6CF /* Route.m */; };
 		DB1017281801D7620012D6CF /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1017271801D7620012D6CF /* Track.m */; };
 		DB10172B1801D78C0012D6CF /* TransportUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10172A1801D78C0012D6CF /* TransportUnit.m */; };
+		DB3B68691858D5BA00B673F8 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3B68681858D5BA00B673F8 /* UIImage+Extensions.m */; };
 		DB6F2BCA180E33EA008B70FB /* RouteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6F2BC9180E33EA008B70FB /* RouteDetailViewController.m */; };
 		DB96D8A01853125000CFC6DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB96D89F1853125000CFC6DF /* Images.xcassets */; };
 		DB96D8A31853160800CFC6DF /* BaseDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB96D8A21853160800CFC6DF /* BaseDataManager.m */; };
@@ -83,6 +84,8 @@
 		DB1017271801D7620012D6CF /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		DB1017291801D78C0012D6CF /* TransportUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportUnit.h; sourceTree = "<group>"; };
 		DB10172A1801D78C0012D6CF /* TransportUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportUnit.m; sourceTree = "<group>"; };
+		DB3B68671858D5BA00B673F8 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
+		DB3B68681858D5BA00B673F8 /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
 		DB6F2BBC180D2496008B70FB /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		DB6F2BC8180E33EA008B70FB /* RouteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteDetailViewController.h; sourceTree = "<group>"; };
 		DB6F2BC9180E33EA008B70FB /* RouteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailViewController.m; sourceTree = "<group>"; };
@@ -445,6 +448,8 @@
 				DBFADCC617FDCD30005EBE0E /* UIView+Creation.m */,
 				DBFADCC717FDCD30005EBE0E /* UIView+Frame.h */,
 				DBFADCC817FDCD30005EBE0E /* UIView+Frame.m */,
+				DB3B68671858D5BA00B673F8 /* UIImage+Extensions.h */,
+				DB3B68681858D5BA00B673F8 /* UIImage+Extensions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -580,6 +585,7 @@
 				DB96D8A31853160800CFC6DF /* BaseDataManager.m in Sources */,
 				DB1017251801D6D30012D6CF /* Route.m in Sources */,
 				DB96D8A71853290A00CFC6DF /* RoutesManager.m in Sources */,
+				DB3B68691858D5BA00B673F8 /* UIImage+Extensions.m in Sources */,
 				DBF81953185344550096D2B7 /* GroupRoutes.m in Sources */,
 				DB1017281801D7620012D6CF /* Track.m in Sources */,
 				DB07833D180BCA8700582EF3 /* RoutesTableViewController.m in Sources */,

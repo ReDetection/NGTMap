@@ -58,7 +58,7 @@ static TransportUnitsManager *instance = nil;
     return self;
 }
 
-- (void)getTransportUnitsByRoutesAndDirections: (NSArray *)routesWithDirections successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
+- (void)getTransportUnitsByRoutesIDsAndDirections: (NSArray *)routesWithDirections successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
     
     NSString *routesWithDirectionsString = [self formattedStringFromArray:routesWithDirections];
     NSString *requestPath = [kTransportUnitsByIdsPath stringByReplacingOccurrencesOfString:kCustomValueInPath withString:routesWithDirectionsString];
@@ -73,7 +73,7 @@ static TransportUnitsManager *instance = nil;
     }];
 }
 
-- (void)getTransportUnitsByRoutes: (NSArray *)routes successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
+- (void)getTransportUnitsByRoutesIDs: (NSArray *)routes successHandler: (TransportUnitsByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler {
     
     NSMutableArray *resultArrayWithDirections = [NSMutableArray array];
     [routes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -82,7 +82,7 @@ static TransportUnitsManager *instance = nil;
         [resultArrayWithDirections addObject:routesWithDirections];
     }];
     
-    [self getTransportUnitsByRoutesAndDirections:resultArrayWithDirections successHandler:successHandler failHandler:failHandler];
+    [self getTransportUnitsByRoutesIDsAndDirections:resultArrayWithDirections successHandler:successHandler failHandler:failHandler];
 }
 
 - (void)cancelGetTransportUnits {

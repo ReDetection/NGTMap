@@ -8,13 +8,17 @@
 
 #import "AppDelegate.h"
 #import "FavoritesManager.h"
+
 #import <RestKit/RestKit.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupRestKit];
-        
+    [self setupMap];
+    [self setupGUI];
+    
     return YES;
 }
 
@@ -25,7 +29,14 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     [[FavoritesManager sharedManager] save];
 }
-							
+
+- (void)setupGUI {
+}
+
+- (void)setupMap {
+    [GMSServices provideAPIKey:kGoogleApiKey];
+}
+
 - (void)setupRestKit {
     NSURL *baseURL = [NSURL URLWithString:kServerAddress];
     AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];

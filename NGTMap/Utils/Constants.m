@@ -21,4 +21,7 @@ NSString *const kRoutesPath = @"/route/list/all";
 NSString *const kTransportUnitsByIdsPath = @"/marker/list/ids/:value";
 NSString *const kTracksByIdsPath = @"/trassa/list/ids/:value";
 
+NSString *const kGoogleApiKey = @"AIzaSyA6FO8Wsh7PvX2aEQD--xehZQhHSq2fp1k";
+NSInteger const kMaxRoutesOnMap = 7;
+
 @end

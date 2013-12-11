@@ -13,8 +13,8 @@ typedef void (^TracksByRouteAndDirectionsSuccessBlock)(NSArray *tracks);
 
 @interface TracksManager : BaseDataManager
 
-- (void)getTracksByRoutesAndDirections: (NSArray *)routesWithDirections successHandler: (TracksByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
-- (void)getTracksByRoutes: (NSArray *)routes successHandler: (TracksByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
+- (void)getTracksByRoutesIDsAndDirections: (NSArray *)routesWithDirections successHandler: (TracksByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
+- (void)getTracksByRoutesIDs: (NSArray *)routes successHandler: (TracksByRouteAndDirectionsSuccessBlock)successHandler failHandler: (SimpleFailBlock)failHandler;
 - (void)cancelGetTracks;
 
 @end

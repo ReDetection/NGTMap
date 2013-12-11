@@ -7,6 +7,7 @@
 //
 
 #import "DataObject.h"
+#import <CoreLocation/CoreLocation.h>
 
 //Транспортная единица (автобус, троллейбус и т.д)
 
@@ -17,8 +18,8 @@
 @property (strong, nonatomic) NSString *routeOldTitle;
 @property (strong, nonatomic) NSNumber *routeType;
 @property (assign, nonatomic) NSInteger direction;
-@property (assign, nonatomic) CGFloat latitude;
-@property (assign, nonatomic) CGFloat longitude;
+@property (assign, nonatomic) CLLocationDegrees latitude;
+@property (assign, nonatomic) CLLocationDegrees longitude;
 @property (assign, nonatomic) CGFloat azimuth;
 @property (strong, nonatomic) NSDate *time;
 @property (assign, nonatomic) CGFloat speed;

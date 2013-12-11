@@ -31,6 +31,7 @@ typedef void (^SimpleFailBlock)(NSError *error);
 
 @interface Constants : NSObject
 
+//Server
 extern NSString *const kServerAddress;
 extern NSString *const kServerApiVersion;
 extern NSString *const kServerApiKey;
@@ -41,5 +42,9 @@ extern NSString *const kCustomValueInPath;
 extern NSString *const kRoutesPath;
 extern NSString *const kTransportUnitsByIdsPath;
 extern NSString *const kTracksByIdsPath;
+
+//Map
+extern NSString *const kGoogleApiKey;
+extern NSInteger const kMaxRoutesOnMap;
 
 @end

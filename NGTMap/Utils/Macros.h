@@ -8,3 +8,8 @@
 #define NOVOSIVIRSK_DEFAULT_LATITUDE 55.033333
 #define NOVOSIVIRSK_DEFAULT_LONGITUDE 82.916667
 #define NOVOSIBIRSK_COORDINATES_REGION MKCoordinateRegionMake(CLLocationCoordinate2DMake(NOVOSIVIRSK_DEFAULT_LATITUDE, NOVOSIVIRSK_DEFAULT_LONGITUDE), MKCoordinateSpanMake(0.1, 0.1))
+
+#define NOVOSIBIRSK_CLLocationCoordinate2D CLLocationCoordinate2DMake(55.033333, 82.916667)
+
+#define IS_IOS7 ([UIDevice currentDevice].systemVersion.floatValue >= 7.0)
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)

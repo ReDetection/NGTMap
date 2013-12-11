@@ -7,10 +7,11 @@
 //
 
 #import "RoutesTableViewController.h"
+#import "MapViewController.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
 
-NSString *const kRouteDetailViewControllerIdentifier = @"showRouteDetailIdentifier";
+NSString *const kShowMapViewControllerIdentifier = @"showMapViewControllerIdentifier";
 
 @interface RoutesTableViewController ()
 
@@ -52,10 +53,10 @@ NSString *const kRouteDetailViewControllerIdentifier = @"showRouteDetailIdentifi
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:kRouteDetailViewControllerIdentifier]) {
+    if ([segue.identifier isEqualToString:kShowMapViewControllerIdentifier]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        RouteDetailViewController *routeDetailVC =  [segue destinationViewController];
-        routeDetailVC.route = _routes[indexPath.row];
+        MapViewController *mapVC =  [segue destinationViewController];
+        mapVC.routes = @[_routes[indexPath.row]];
     }
     
 }
@@ -84,7 +85,7 @@ NSString *const kRouteDetailViewControllerIdentifier = @"showRouteDetailIdentifi
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:kRouteDetailViewControllerIdentifier sender:nil];
+    [self performSegueWithIdentifier:kShowMapViewControllerIdentifier sender:nil];
 }
 
 #pragma mark - RoutesTableViewCellDelegate

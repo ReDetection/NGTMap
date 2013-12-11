@@ -11,9 +11,12 @@
 #import "TracksManager.h"
 #import "TransportUnitsManager.h"
 #import "FavoritesManager.h"
+#import "MapViewController.h"
 
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+
+NSString *const kFromRouteDetailToMapViewIdentifier = @"FromRouteDetailToMapViewIdentifier";
 
 @interface RouteDetailViewController ()
 
@@ -31,8 +34,6 @@
 @property (strong, nonatomic) Track *track;
 
 - (IBAction)favouriteAction:(id)sender;
-- (IBAction)showMapAction:(id)sender;
-
 
 @end
 
@@ -46,7 +47,7 @@
     
     NSArray *routesArray = @[_route.identifier];
     
-    [[TransportUnitsManager sharedManager] getTransportUnitsByRoutes:routesArray successHandler:^(NSArray *transportUnits) {
+    [[TransportUnitsManager sharedManager] getTransportUnitsByRoutesIDs:routesArray successHandler:^(NSArray *transportUnits) {
         NSPredicate *filterOnlinePredictate = [NSPredicate predicateWithFormat:@"offlineStatus == %d", OnlineTransportUnitWorkStatus];
         _transportUnits = [transportUnits filteredArrayUsingPredicate:filterOnlinePredictate];
         _numberOfRoutesLabel.text = [NSString stringWithFormat:@"%d", _transportUnits.count];
@@ -54,8 +55,9 @@
         
     }];
     
-    [[TracksManager sharedManager] getTracksByRoutes:routesArray successHandler:^(NSArray *tracks) {
+    [[TracksManager sharedManager] getTracksByRoutesIDs:routesArray successHandler:^(NSArray *tracks) {
         _track = routesArray[0];
+        
     } failHandler:^(NSError *error) {
         
     }];
@@ -70,10 +72,18 @@
     [self updateData];
 }
 
+
 - (void)viewWillDisappear:(BOOL)animated {
     if ([self isMovingFromParentViewController]) {
         [[TracksManager sharedManager] cancelGetTracks];
         [[TransportUnitsManager sharedManager] cancelGetTransportUnits];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:kFromRouteDetailToMapViewIdentifier]) {
+        MapViewController *mapVC = segue.destinationViewController;
+        mapVC.routes = @[_route];
     }
 }
 
@@ -98,9 +108,6 @@
     }
     
     [self updateFavouiritesButton];
-}
-
-- (IBAction)showMapAction:(id)sender {
 }
 
 
