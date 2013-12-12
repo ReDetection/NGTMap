@@ -109,6 +109,7 @@
             
             GMSMarker *marker = [[GMSMarker alloc] init];
             marker.position = CLLocationCoordinate2DMake(transportUnit.latitude, transportUnit.longitude);
+            marker.groundAnchor = CGPointMake(0.5, 0.5);
             marker.icon = [[UIImage imageNamed:@"arrow"] imageRotatedByDegrees:transportUnit.azimuth];
             marker.map = _mapView;
         }];
