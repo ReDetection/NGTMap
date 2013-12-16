@@ -44,9 +44,6 @@
 		DBFADCAE17FDCC97005EBE0E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFADCAC17FDCC97005EBE0E /* MainStoryboard.storyboard */; };
 		DBFADCC917FDCD30005EBE0E /* NSObject-ClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC017FDCD30005EBE0E /* NSObject-ClassName.m */; };
 		DBFADCCA17FDCD30005EBE0E /* UITableViewCellAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC217FDCD30005EBE0E /* UITableViewCellAdditions.m */; };
-		DBFADCCB17FDCD30005EBE0E /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC417FDCD30005EBE0E /* UIView+Animations.m */; };
-		DBFADCCC17FDCD30005EBE0E /* UIView+Creation.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC617FDCD30005EBE0E /* UIView+Creation.m */; };
-		DBFADCCD17FDCD30005EBE0E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC817FDCD30005EBE0E /* UIView+Frame.m */; };
 		DBFADCD217FDCEA0005EBE0E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCD117FDCEA0005EBE0E /* Constants.m */; };
 		DBFADCD917FDD029005EBE0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADCD817FDD029005EBE0E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -120,12 +117,6 @@
 		DBFADCC017FDCD30005EBE0E /* NSObject-ClassName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-ClassName.m"; sourceTree = "<group>"; };
 		DBFADCC117FDCD30005EBE0E /* UITableViewCellAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellAdditions.h; sourceTree = "<group>"; };
 		DBFADCC217FDCD30005EBE0E /* UITableViewCellAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellAdditions.m; sourceTree = "<group>"; };
-		DBFADCC317FDCD30005EBE0E /* UIView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animations.h"; sourceTree = "<group>"; };
-		DBFADCC417FDCD30005EBE0E /* UIView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animations.m"; sourceTree = "<group>"; };
-		DBFADCC517FDCD30005EBE0E /* UIView+Creation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Creation.h"; sourceTree = "<group>"; };
-		DBFADCC617FDCD30005EBE0E /* UIView+Creation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Creation.m"; sourceTree = "<group>"; };
-		DBFADCC717FDCD30005EBE0E /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
-		DBFADCC817FDCD30005EBE0E /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		DBFADCD017FDCEA0005EBE0E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		DBFADCD117FDCEA0005EBE0E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		DBFADCD817FDD029005EBE0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -442,12 +433,6 @@
 				DBFADCC017FDCD30005EBE0E /* NSObject-ClassName.m */,
 				DBFADCC117FDCD30005EBE0E /* UITableViewCellAdditions.h */,
 				DBFADCC217FDCD30005EBE0E /* UITableViewCellAdditions.m */,
-				DBFADCC317FDCD30005EBE0E /* UIView+Animations.h */,
-				DBFADCC417FDCD30005EBE0E /* UIView+Animations.m */,
-				DBFADCC517FDCD30005EBE0E /* UIView+Creation.h */,
-				DBFADCC617FDCD30005EBE0E /* UIView+Creation.m */,
-				DBFADCC717FDCD30005EBE0E /* UIView+Frame.h */,
-				DBFADCC817FDCD30005EBE0E /* UIView+Frame.m */,
 				DB3B68671858D5BA00B673F8 /* UIImage+Extensions.h */,
 				DB3B68681858D5BA00B673F8 /* UIImage+Extensions.m */,
 			);
@@ -570,10 +555,7 @@
 				DBFADCC917FDCD30005EBE0E /* NSObject-ClassName.m in Sources */,
 				DBF8194F185340F30096D2B7 /* FavoritesManager.m in Sources */,
 				DBFADCCA17FDCD30005EBE0E /* UITableViewCellAdditions.m in Sources */,
-				DBFADCCB17FDCD30005EBE0E /* UIView+Animations.m in Sources */,
 				DB078396180BD7D700582EF3 /* SettingsTableViewController.m in Sources */,
-				DBFADCCC17FDCD30005EBE0E /* UIView+Creation.m in Sources */,
-				DBFADCCD17FDCD30005EBE0E /* UIView+Frame.m in Sources */,
 				DB0D2AE9180F930600D2CC57 /* SimpleTrackPoint.m in Sources */,
 				DBFADCD217FDCEA0005EBE0E /* Constants.m in Sources */,
 				DB96D8AB18532D0A00CFC6DF /* TracksManager.m in Sources */,
