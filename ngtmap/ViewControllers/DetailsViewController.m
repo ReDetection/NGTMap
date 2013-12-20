@@ -109,6 +109,10 @@ typedef enum { SectionHeader, SectionButtons, SectionTimetable } Sections;
     self.mapView.layer.borderColor = [UIColor darkGrayColor].CGColor;
     self.mapView.layer.borderWidth = 1.0;
     self.mapView.layer.cornerRadius = 8.0;
+    
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        self.edgesForExtendedLayout=UIRectEdgeNone;
+    }
 }
 
 - (void)refreshControls { 

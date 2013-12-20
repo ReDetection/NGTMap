@@ -27,10 +27,8 @@
         self.transportDataSource = [[NGTDataSource alloc] init];
         
         // Кнопочка инфо
-        UIBarButtonItem *infoButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"info.png"] 
-                                                                       style:UIBarButtonItemStyleBordered
-                                                                      target:self 
-                                                                      action:@selector(showInfoController)];
+        UIBarButtonItem *infoButton = [[UIBarButtonItem alloc] initWithTitle:@"i" style:UIBarButtonItemStyleBordered target:self action:@selector(showInfoController)];
+        
         self.navigationItem.rightBarButtonItem = infoButton;
         [infoButton release];
     }
