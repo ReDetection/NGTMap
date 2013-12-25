@@ -27,7 +27,7 @@
     double tailLX = 18.62 * cos(radians + M_PI_2 + M_PI_4);
     double tailLY = 18.62 * sin(radians + M_PI_2 + M_PI_4);
 
-    UIGraphicsBeginImageContext(CGSizeMake(40,40));
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(40,40), NO, [UIScreen mainScreen].scale);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     CGContextSetShouldAntialias(ctx,YES);
 
