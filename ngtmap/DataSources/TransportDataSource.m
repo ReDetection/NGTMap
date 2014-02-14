@@ -64,9 +64,7 @@
 	{
 		if ([scope isEqualToString:@"All"] || [transport.type isEqualToString:scope])
 		{
-			NSComparisonResult result = [transport.number compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
-            if (result == NSOrderedSame)
-			{
+            if ([transport.number rangeOfString:searchText].location != NSNotFound) {
 				[self.filteredTransportList addObject:transport];
             }
 		}
