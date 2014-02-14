@@ -44,7 +44,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Crashlytics startWithAPIKey:@"406ae1ba89d9e2e26813c2571b1692553d7f1562"];
+    [Crashlytics startWithAPIKey:@"261104eb7a296face9abfa8dde0015642474bf9a"];
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];        
     

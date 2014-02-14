@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36DFFAB218ADDB0200765023 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DFFAB118ADDB0200765023 /* Crashlytics.framework */; };
 		710054A316B2EC1800E33187 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7100549E16B2EC1800E33187 /* Default-568h@2x.png */; };
 		710054A416B2EC1800E33187 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7100549F16B2EC1800E33187 /* Default.png */; };
 		710054A516B2EC1800E33187 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 710054A016B2EC1800E33187 /* Default@2x.png */; };
@@ -14,7 +15,6 @@
 		710054A716B2EC1800E33187 /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 710054A216B2EC1800E33187 /* icon114.png */; };
 		715E6CCC16BE6D1600094B38 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 715E6CCB16BE6D1600094B38 /* Utility.m */; };
 		71EDAC9C16C5668A006FC880 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EDAC9B16C5668A006FC880 /* QuartzCore.framework */; };
-		7307496C16CD17420024330B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7307496B16CD17420024330B /* Crashlytics.framework */; };
 		730B95DA16A28259007105BB /* RoutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730B95D816A28259007105BB /* RoutesViewController.m */; };
 		730B95DB16A28259007105BB /* RoutesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 730B95D916A28259007105BB /* RoutesViewController.xib */; };
 		730B95DF16A287F2007105BB /* routes.png in Resources */ = {isa = PBXBuildFile; fileRef = 730B95DE16A287F2007105BB /* routes.png */; };
@@ -97,6 +97,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36DFFAB118ADDB0200765023 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		7100549E16B2EC1800E33187 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Images/media/Default-568h@2x.png"; sourceTree = "<group>"; };
 		7100549F16B2EC1800E33187 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Images/media/Default.png; sourceTree = "<group>"; };
 		710054A016B2EC1800E33187 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Images/media/Default@2x.png"; sourceTree = "<group>"; };
@@ -106,7 +107,6 @@
 		715E6CCB16BE6D1600094B38 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		71A159C316B0331B0021061A /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		71EDAC9B16C5668A006FC880 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		7307496B16CD17420024330B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		730B95D716A28259007105BB /* RoutesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoutesViewController.h; path = ViewControllers/RoutesViewController.h; sourceTree = "<group>"; };
 		730B95D816A28259007105BB /* RoutesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoutesViewController.m; path = ViewControllers/RoutesViewController.m; sourceTree = "<group>"; };
 		730B95D916A28259007105BB /* RoutesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RoutesViewController.xib; path = ViewControllers/RoutesViewController.xib; sourceTree = "<group>"; };
@@ -218,9 +218,9 @@
 				7310584514ECEF6E00F984A8 /* CoreLocation.framework in Frameworks */,
 				736C007214E82D3D005D6503 /* MapKit.framework in Frameworks */,
 				736C004314E81351005D6503 /* UIKit.framework in Frameworks */,
+				36DFFAB218ADDB0200765023 /* Crashlytics.framework in Frameworks */,
 				736C004514E81351005D6503 /* Foundation.framework in Frameworks */,
 				736C004714E81351005D6503 /* CoreGraphics.framework in Frameworks */,
-				7307496C16CD17420024330B /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,8 +387,8 @@
 		736C004114E81351005D6503 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36DFFAB118ADDB0200765023 /* Crashlytics.framework */,
 				71EDAC9B16C5668A006FC880 /* QuartzCore.framework */,
-				7307496B16CD17420024330B /* Crashlytics.framework */,
 				738F7CDC1622AF420024457A /* StoreKit.framework */,
 				733B0F8A14F021BE004E01BD /* SystemConfiguration.framework */,
 				7310584414ECEF6E00F984A8 /* CoreLocation.framework */,
@@ -562,7 +562,7 @@
 			attributes = {
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = 736C003814E81351005D6503 /* Build configuration list for PBXProject "ngtmap" */;
+			buildConfigurationList = 736C003814E81351005D6503 /* Build configuration list for PBXProject "NGTMap" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -661,7 +661,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run 406ae1ba89d9e2e26813c2571b1692553d7f1562";
+			shellScript = "./Crashlytics.framework/run 261104eb7a296face9abfa8dde0015642474bf9a c05cdf5318ce83623931cc07e122547e5999e70bd727a6486e87ab5f8804b88a";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -755,7 +755,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					/Users/sbuglakov/src/github/NTGMap,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ngtmap/ngtmap-Prefix.pch";
@@ -779,7 +780,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					/Users/sbuglakov/src/github/NTGMap,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ngtmap/ngtmap-Prefix.pch";
@@ -799,7 +801,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		736C003814E81351005D6503 /* Build configuration list for PBXProject "ngtmap" */ = {
+		736C003814E81351005D6503 /* Build configuration list for PBXProject "NGTMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				736C005A14E81355005D6503 /* Debug */,
