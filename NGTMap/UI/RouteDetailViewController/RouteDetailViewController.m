@@ -28,8 +28,6 @@ NSString *const kFromRouteDetailToMapViewIdentifier = @"FromRouteDetailToMapView
 @property (weak, nonatomic) IBOutlet UILabel *numberOfRoutesLabel;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
-@property (strong, nonatomic) NSDictionary *routeTypeImageNames;
-
 @property (strong, nonatomic) NSArray *transportUnits;
 @property (strong, nonatomic) Track *track;
 
@@ -42,8 +40,6 @@ NSString *const kFromRouteDetailToMapViewIdentifier = @"FromRouteDetailToMapView
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.routeTypeImageNames = @{[NSNumber numberWithInteger:BusRouteType]: @"routes_bus_icon.png", [NSNumber numberWithInteger:TrolleyBusRouteType]: @"routes_trolleybus_icon.png", [NSNumber numberWithInteger:TramRouteType]: @"routes_trambus_icon.png", [NSNumber numberWithInteger:MicroBusRouteType]: @"routes_microbus_icon.png"};
     
     NSArray *routesArray = @[_route.identifier];
     
@@ -88,7 +84,7 @@ NSString *const kFromRouteDetailToMapViewIdentifier = @"FromRouteDetailToMapView
 }
 
 - (void)updateData {
-    NSString *imageTypeName = [_routeTypeImageNames objectForKey:_route.type];
+    NSString *imageTypeName = ROUTE_TYPE_IMAGE_NAMES[_route.type];
     self.routeTypeImageView.image = [UIImage imageNamed:imageTypeName];
     
     self.routeTitleLabel.text = _route.title;

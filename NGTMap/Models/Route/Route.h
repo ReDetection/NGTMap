@@ -8,6 +8,8 @@
 
 #import "DataObject.h"
 
+extern NSDictionary *ROUTE_TYPE_IMAGE_NAMES;
+
 //Маршрут
 
 @interface Route : DataObject

@@ -19,23 +19,17 @@ NSString *const kShowMapViewControllerIdentifier = @"showMapViewControllerIdenti
 
 @implementation RoutesTableViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     self.clearsSelectionOnViewWillAppear = YES;
-    
-    //TODO вынести в отдельное место
-    self.routeTypeImageNames = @{[NSNumber numberWithInteger:BusRouteType]: @"routes_bus_icon.png", [NSNumber numberWithInteger:TrolleyBusRouteType]: @"routes_trolleybus_icon.png", [NSNumber numberWithInteger:TramRouteType]: @"routes_trambus_icon.png", [NSNumber numberWithInteger:MicroBusRouteType]: @"routes_microbus_icon.png"};
-    
-    [self.tableView registerNib:[UINib nibWithNibName:@"RoutesTableViewCell" bundle:nil] forCellReuseIdentifier:@"RoutesTableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:[RoutesTableViewCell className] bundle:nil] forCellReuseIdentifier:[RoutesTableViewCell className]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     [self updateData];
-    
 }
 
 - (void)updateData {
@@ -77,7 +71,7 @@ NSString *const kShowMapViewControllerIdentifier = @"showMapViewControllerIdenti
     cell.routeStopBeginLabel.text = route.stopBegin;
     cell.routeStopEndLabel.text = route.stopEnd;
     
-    NSString *imageTypeName = [_routeTypeImageNames objectForKey:route.type];
+    NSString *imageTypeName = ROUTE_TYPE_IMAGE_NAMES[route.type];
     cell.routeTypeImageView.image = [UIImage imageNamed:imageTypeName];
     
     [self updateFavouiritesButtonsForCell:cell withRoute:route];

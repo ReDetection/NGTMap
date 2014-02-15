@@ -16,7 +16,6 @@
 
 @interface RoutesTableViewController : UITableViewController <RoutesTableViewCellDelegate>
 
-@property (strong, nonatomic) NSDictionary *routeTypeImageNames;
 @property (strong, nonatomic) NSArray *routes;
 
 - (void)routesTableViewCellFavouriteAction: (RoutesTableViewCell *)cell;
