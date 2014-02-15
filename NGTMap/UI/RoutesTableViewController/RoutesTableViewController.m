@@ -8,7 +8,7 @@
 
 #import "RoutesTableViewController.h"
 #import "MapViewController.h"
-
+#import "NSObject-ClassName.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 
 NSString *const kShowMapViewControllerIdentifier = @"showMapViewControllerIdentifier";
@@ -27,6 +27,8 @@ NSString *const kShowMapViewControllerIdentifier = @"showMapViewControllerIdenti
     
     //TODO вынести в отдельное место
     self.routeTypeImageNames = @{[NSNumber numberWithInteger:BusRouteType]: @"routes_bus_icon.png", [NSNumber numberWithInteger:TrolleyBusRouteType]: @"routes_trolleybus_icon.png", [NSNumber numberWithInteger:TramRouteType]: @"routes_trambus_icon.png", [NSNumber numberWithInteger:MicroBusRouteType]: @"routes_microbus_icon.png"};
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"RoutesTableViewCell" bundle:nil] forCellReuseIdentifier:@"RoutesTableViewCell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -67,9 +69,8 @@ NSString *const kShowMapViewControllerIdentifier = @"showMapViewControllerIdenti
     return [self.routes count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    RoutesTableViewCell *cell = [RoutesTableViewCell createTableViewCellForTable:tableView];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    RoutesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[RoutesTableViewCell className] forIndexPath:indexPath];
     cell.delegate = self;
     Route *route = _routes[indexPath.row];
     cell.routeTitleLabel.text = [NSString stringWithFormat:@"%@%@",route.title, route.oldTitle == nil ? @"" : [NSString stringWithFormat:@" (%@)",route.oldTitle]];

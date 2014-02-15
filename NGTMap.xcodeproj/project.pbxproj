@@ -43,7 +43,6 @@
 		DBFADCA517FDCC97005EBE0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCA417FDCC97005EBE0E /* AppDelegate.m */; };
 		DBFADCAE17FDCC97005EBE0E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFADCAC17FDCC97005EBE0E /* MainStoryboard.storyboard */; };
 		DBFADCC917FDCD30005EBE0E /* NSObject-ClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC017FDCD30005EBE0E /* NSObject-ClassName.m */; };
-		DBFADCCA17FDCD30005EBE0E /* UITableViewCellAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCC217FDCD30005EBE0E /* UITableViewCellAdditions.m */; };
 		DBFADCD217FDCEA0005EBE0E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFADCD117FDCEA0005EBE0E /* Constants.m */; };
 		DBFADCD917FDD029005EBE0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFADCD817FDD029005EBE0E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -115,8 +114,6 @@
 		DBFADCAD17FDCC97005EBE0E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DBFADCBF17FDCD30005EBE0E /* NSObject-ClassName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-ClassName.h"; sourceTree = "<group>"; };
 		DBFADCC017FDCD30005EBE0E /* NSObject-ClassName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-ClassName.m"; sourceTree = "<group>"; };
-		DBFADCC117FDCD30005EBE0E /* UITableViewCellAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellAdditions.h; sourceTree = "<group>"; };
-		DBFADCC217FDCD30005EBE0E /* UITableViewCellAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellAdditions.m; sourceTree = "<group>"; };
 		DBFADCD017FDCEA0005EBE0E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		DBFADCD117FDCEA0005EBE0E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		DBFADCD817FDD029005EBE0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -431,8 +428,6 @@
 			children = (
 				DBFADCBF17FDCD30005EBE0E /* NSObject-ClassName.h */,
 				DBFADCC017FDCD30005EBE0E /* NSObject-ClassName.m */,
-				DBFADCC117FDCD30005EBE0E /* UITableViewCellAdditions.h */,
-				DBFADCC217FDCD30005EBE0E /* UITableViewCellAdditions.m */,
 				DB3B68671858D5BA00B673F8 /* UIImage+Extensions.h */,
 				DB3B68681858D5BA00B673F8 /* UIImage+Extensions.m */,
 			);
@@ -554,7 +549,6 @@
 				DB0783AD180C03B400582EF3 /* RoutesTableViewCell.m in Sources */,
 				DBFADCC917FDCD30005EBE0E /* NSObject-ClassName.m in Sources */,
 				DBF8194F185340F30096D2B7 /* FavoritesManager.m in Sources */,
-				DBFADCCA17FDCD30005EBE0E /* UITableViewCellAdditions.m in Sources */,
 				DB078396180BD7D700582EF3 /* SettingsTableViewController.m in Sources */,
 				DB0D2AE9180F930600D2CC57 /* SimpleTrackPoint.m in Sources */,
 				DBFADCD217FDCEA0005EBE0E /* Constants.m in Sources */,

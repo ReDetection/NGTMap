@@ -13,7 +13,6 @@
 #import "Route.h"
 #import "RoutesManager.h"
 #import "FavoritesManager.h"
-#import "UITableViewCellAdditions.h"
 
 @interface RoutesTableViewController : UITableViewController <RoutesTableViewCellDelegate>
 
