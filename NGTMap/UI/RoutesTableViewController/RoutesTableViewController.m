@@ -72,7 +72,7 @@ NSString *const kShowMapViewControllerIdentifier = @"showMapViewControllerIdenti
     RoutesTableViewCell *cell = [RoutesTableViewCell createTableViewCellForTable:tableView];
     cell.delegate = self;
     Route *route = _routes[indexPath.row];
-    cell.routeTitleLabel.text = [NSString stringWithFormat:@"%@ (%@)",route.title, route.oldTitle];
+    cell.routeTitleLabel.text = [NSString stringWithFormat:@"%@%@",route.title, route.oldTitle == nil ? @"" : [NSString stringWithFormat:@" (%@)",route.oldTitle]];
     cell.routeStopBeginLabel.text = route.stopBegin;
     cell.routeStopEndLabel.text = route.stopEnd;
     
